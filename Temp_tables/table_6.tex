@@ -6,19 +6,21 @@
 \begin{document}
 
 
-\begin{table}[htbp]\centering
-  \resizebox{1\textwidth}{!}{
-    \begin{threeparttable}
-      \caption{\small Summary Statistics by City-industry characteristics and City characteristics}
+\begin{table}[!htbp] \centering
+  %\resizebox{1\textwidth}{!}{
+    %\begin{threeparttable}
+    \caption{SOE}
+      \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+     \label{}
       \begin{tabular}{lrrrr}
-        \multicolumn{1}{l}{\textbf{Panel A: SOE dominated sector}} \\
+        \multicolumn{1}{l}{\textbf{Panel A: SOE Dominating sector}} \\
         \toprule
-        & \multicolumn{4}{c}{The Dependent variable: Ln SO2_{cit}} \\
+        & \multicolumn{4}{c}{The Dependent variable: Ln SO2_{ikt}} \\
         \cline{2-5}
         \\[-1.8ex] & (1) & (2) & (3) & (4)\\
         \\[-1.8ex] & (SOE count) & (Output share) & (Capital share) & (Labour share)\\
         \hline \\[-1.8ex]
-        TCZ_c \times \text{Polluted}_i \times \text{Period} & $-$0.123 & 0.101           & 0.114           & 0.235           \\
+        TCZ_i \times \text{Polluted}_k \times \text{Period} & $-$0.123 & 0.101           & 0.114           & 0.235           \\
                                                             & (0.216)  & (0.234)         & (0.229)         & (0.232)         \\
         \hline \\[-1.8ex]
         City-year fixed effects                             & Yes      & Yes             & Yes             & Yes             \\
@@ -29,14 +31,14 @@
         R$^{2}$                                             & 0.888    & 0.865           & 0.869           & 0.862           \\
         \bottomrule
         \\ %%% Create second table
-        \multicolumn{1}{l}{\textbf{Panel B: SOE dominating sector}} \\
+        \multicolumn{1}{l}{\textbf{Panel B: Prviate Dominating sectors}} \\
         \toprule
-        & \multicolumn{4}{c}{The Dependent variable: Ln SO2_{cit}} \\
+        & \multicolumn{4}{c}{The Dependent variable: Ln SO2_{ikt}} \\
         \cline{2-5}
         \\[-1.8ex] & (1) & (2) & (3) & (4)\\
         \\[-1.8ex] & (SOE count) & (Output share) & (Capital share) & (Labour share)\\
         \hline \\[-1.8ex]
-        TCZ_c \times \text{Polluted}_i \times \text{Period} & $-$0.138 & $-$0.243$^{**}$ & $-$0.272$^{**}$ & $-$0.284$^{**}$ \\
+        TCZ_i \times \text{Polluted}_k \times \text{Period} & $-$0.138 & $-$0.243$^{**}$ & $-$0.272$^{**}$ & $-$0.284$^{**}$ \\
                                                             & (0.145)  & (0.124)         & (0.124)         & (0.125)         \\
         \hline \\[-1.8ex]
         City-year fixed effects                             & Yes      & Yes             & Yes             & Yes             \\
@@ -45,15 +47,15 @@
         Observations                                        & 21,444   & 20,852          & 20,253          & 20,600          \\
         Number sectors                                      & X        & 204             & 192             & 198             \\
         R$^{2}$                                             & 0.849    & 0.857           & 0.853           & 0.858           \\
-      \end{tabular}
-      \begin{tablenotes}
-        \small
-        \item Panel A
-        Panel B \\
-        Sources: Author's own computation
-      \end{tablenotes}
-    \end{threeparttable}
-  }
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+      \\
+    \end{tablenotes}
 \end{table}
 
 % Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
@@ -65,12 +67,12 @@
     \begin{tabular}{@{\extracolsep{5pt}}lcccc}
       \\[-1.8ex]\hline
       \hline \\[-1.8ex]
-      & \multicolumn{4}{c}{The Dependent variable: Ln SO2_{cit}} \\
+      & \multicolumn{4}{c}{The Dependent variable: Ln SO2_{ikt}} \\
       \cline{2-5}
       \\[-1.8ex] & (1) & (2) & (3) & (4)\\
       \\[-1.8ex] & (SOE count) & (Output share) & (Capital share) & (Labour share)\\
       \hline \\[-1.8ex]
-      TCZ_c \times \text{Polluted}_i \times \text{Period} & $-$0.138 & $-$0.243$^{**}$ & $-$0.272$^{**}$ & $-$0.284$^{**}$ \\
+      TCZ_i \times \text{Polluted}_k \times \text{Period} & $-$0.138 & $-$0.243$^{**}$ & $-$0.272$^{**}$ & $-$0.284$^{**}$ \\
                                                           & (0.145)  & (0.124)         & (0.124)         & (0.125)         \\
       \hline \\[-1.8ex]
       City-year fixed effects                             & Yes      & Yes             & Yes             & Yes             \\
@@ -80,11 +82,14 @@
       R$^{2}$                                             & 0.849    & 0.857           & 0.853           & 0.858           \\
       \hline
       \hline \\[-1.8ex]
-      \textit{Note:}  & \multicolumn{4}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
-      & \multicolumn{4}{l}{Heteroskedasticity-robust standard errors in parentheses} \\
-      & \multicolumn{4}{l}{are clustered by city} \\
-    \end{tabular}
+      \end{tabular}
   \end{adjustbox}
+  \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+    \end{tablenotes}
 \end{table}
 
 \end{document}
