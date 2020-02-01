@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{capt-of}% or use the larger `caption` package
+
+\usepackage{lipsum}% dummy text
+\begin{document}
+\lipsum % Text before
+\afterpage{%
+    \clearpage% Flush earlier floats (otherwise order might not be correct)
+    \thispagestyle{empty}% empty page style (?)
+    \begin{landscape}% Landscape page
+        \centering % Center table
+        \begin{tabular}{llll}
+            A & B & C & D \\
+        \end{tabular}
+        \captionof{table}{Table caption}% Add 'table' caption
+    \end{landscape}
+    \clearpage% Flush page
+}
+\lipsum % Text after
+\end{document}

@@ -1,0 +1,936 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,
+ulem,graphicx,color,setspace,sectsty,comment,footmisc,
+natbib,
+pdflscape,subfigure,array,hyperref, booktabs,
+threeparttable, siunitx, adjustbox,
+rotating}
+
+%https://www.stefaanlippens.net/latex-trick-customizing-captions.html
+\usepackage[font=sf, labelfont={sf,bf}, margin=1cm, justification=raggedright,singlelinecheck=false]{caption}
+
+\usepackage[utf8]{inputenc}
+
+%Change spacing between section
+\usepackage{titlesec}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\graphicspath{{Paper/images/}}
+
+%https://www.overleaf.com/learn/latex/Natbib_citation_styles
+%https://www.overleaf.com/learn/latex/Bibtex%20bibliography%20styles#Natbib_styles
+%
+%\usepackage[authordate, natbib,backend=biber]{biblatex-chicago}
+%\bibliography{Bibliography/SBC_bibliography.bib}
+%https://gking.harvard.edu/files/natnotes2.pdf
+\bibliographystyle{chicago}
+
+
+%%Resize figure and make sure not one page
+% https://www.overleaf.com/learn/latex/Questions/How_can_I_get_my_table_or_figure_to_stay_where_they_are,_instead_of_going_to_the_next_page%3F
+
+\normalem
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+%https://tex.stackexchange.com/questions/410173/package-inputenc-error-unicode-char-u2212-error?noredirect=1&lq=1
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\begin{titlepage}
+
+
+\title{New Evidence on the Soft Budget Constraint: Chinese Environmental Policy Effectiveness in Private versus SOEs\thanks{We would like to thank Zhao Ruili and Zhou Ling for their precious help in collecting the data from the China Environment Statistics Yearbook.}}
+\author{
+Mathilde Maurel\thanks{CNRS, France and Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France} 
+\and Thomas Pernet\thanks{Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France,
+\href{mailto:t.pernetcoudrier@gmail.com}{email: t.pernetcoudrier@gmail.com} 
+%email: \href{t.pernetcoudrier@gmail.com}
+}
+}
+
+\date{}
+
+\maketitle
+\begin{abstract}
+\noindent This paper analyses the efficiency of a set of environmental measures introduced by the 11th FYP (Five Years Plan) in China in 2006, using a rich and unique dataset borrowed from the Ministry of Environmental Protection (MEP) and from the State Environmental Protection Agency (SEPA). The objective is to provide new evidence of the Soft Budget Constraint (SBC), which is a key concept coined by Janos Kornai. The main finding is that TCZ (Two Control Zone) cities are successful in bringing down the emission of SO2, and more importantly that this success is driven by the private sector. Sectors dominated by State-Owned Enterprises (SOEs) are less sensitive to the environmental target-based evaluation system, by a factor of 42\%. We also find that one channel, through which this adjustment takes place, is Total Factor Productivity (TFP), but not in the case of SOEs. We interpret these results as pointing to the evidence of a still ongoing SBC surrounding Chinese SOEs.  
+\vspace{0em}\\
+\noindent\textbf{Keywords:} Environmental regulation, China, Kornai, Soft Budget Constraint\\
+\vspace{0em}\\
+\noindent\textbf{JEL Codes:} Q53,Q56,P2,R11
+\\
+
+\bigskip
+\end{abstract}
+\setcounter{page}{0}
+\thispagestyle{empty}
+\end{titlepage}
+\pagebreak \newpage
+
+\doublespacing
+
+\section{Introduction} \label{sec:introduction}
+
+The case of China offers an illustration of the dilemma many nations face between the objectives concerning development and poverty reduction on the one hand and those of fighting against pollution on the other. Environmental protection is sometimes at odds with poverty reduction, as the steps required to reduce poverty may entail a cost in terms of pollution to build infrastructure and stimulate economies. Despite this cost, in 2005, China launched a set of vigorous measures aimed at combatting growth-induced pollution and environmental degradation. The question to be addressed here is whether this voluntary approach is sufficient and whether it can bring about the desired outcomes. 
+
+The Chinese model of development is characterized by its dualism \citep{Vahabi1995-fm}, as a model of federalism that implies a specific trade-off between political cost and economic benefit seen in the still ongoing planning of the economy and the concomitant liberalization of market forces \citep{Berglof1998-oc,Qian1998-yf}. As a consequence, China's political decision to reduce growth-induced pollution emissions is rooted in its FYP (Five Years Plan) strategy and the enforcement of political objectives by the central government, which aims at keeping pollution under control. Is its approach efficient? This paper provides an answer to this question. It stresses the relative efficiency of state regulation by highlighting the strength of Chinese firms' policy-induced responses. 
+
+Moreover, this paper also shows that, while private firms have been sensitive to the new environmental targets and have made significant reductions in their emissions of pollutants, State-Owned Enterprises (SOEs) have not taken similar steps. SOEs' inaction in this regard has been widely viewed as an outcome of the 'soft budget constraint' (SBC) \citep{Kornai2003-nv}. It is a term initially coined by Janos Kornai (\citeyear{Kornai1993-kg, Kornai1995-cu, Kornai1998-ek, Kornai2001-bw}), who referred to the phenomenon of bailing-out loss-making firms that consequently undermines ex-ante incentives.
+
+The concept of the SBC sees a straightforward application to the objective of sustainable growth: under the condition that they have rational expectations to be refinanced, as in the case of SOEs, enterprises will not be motivated to reach their objective of reducing pollution. Furthermore, the presence of the SBC among certain groups of enterprises (SOEs) implies that there is a harder budget constraint for other enterprises. In reference to the case of former Yugoslavia, \cite{Kraft1992-iy} demonstrate that, while the manufacturing sector was a net beneficiary of redistribution, its SBC was compensated for by a harder budget constraint in the private business sector. 
+
+This reasoning holds in many other circumstances, as are described in this paper, which establishes that private firms have to adjust and decrease pollution more vigorously than they should need to, in order to compensate for the weak restructuring and weak adoption of green innovations by SOEs. A final but significant element to be discussed is innovation, and research and development (R\&D). Interestingly, \cite{Huang1998-pi} argue that SOEs and large corporations tend to maintain the stability of their R&D organizations.
+
+The lack of effective ex-post screening mechanisms in large corporations and SOEs makes them tend to choose safer innovative projects. In contrast, green projects are usually risky and are more likely to be undertaken by small or private firms. It translates to private firms benefiting from higher returns from environmental incentives than SOEs.  
+
+The objective of this paper is as follows. First, it intends to evaluate the efficiency of the new environmental policy launched during the 11th FYP, by paying particular attention to cities targeted by the central government, called TCZ cities. Are the industries located in those cities, particularly the most polluting ones, more successful in fighting against pollution and meeting the new targets in terms of pollution reduction? Second, the paper examines whether SOEs behave differently as compared with private firms. We expect that SOEs will invest a lower amount of resources in meeting the requirements imposed by the environmental policy. We start the analysis by presenting the main characteristics of the Chinese environmental policy before 2006 and up to 2010, which corresponds to the period of our dataset. 
+
+Then, in the following section, we discuss the empirical specification and the dataset. Section \ref{sec:empirical} sets-up the empirical analysis, main results, robustness checks. Section \ref{sec:channels} develops the transmission mechanisms by paying special attention to the impact of environmental policies on Total Factor Productivity (TFP) and we distinguish TFP for private firms as opposed to SOEs. Finally, this paper concludes in Section \ref{sec:conclusion}.
+
+\section{Policy Background} \label{sec:Policy}
+
+The Chinese policymakers decided to take the environmental issue seriously after the sulfur dioxide (SO2) peak hurt the country in 1995. In no less than three years, the officials in Beijing proposed and ratified a law regulating SO2 emissions. In 1998, the \textit{'Acid Rain Control Zones and Sulfur Dioxide Pollution Control Zones'} policy, abbreviated as \textit{'Two Control Zone'} (TCZ), was implemented by the central government, to control the emissions of this pollutant. 
+
+While the regulation of SO2 emissions was initially designed to be implemented at the national level, the State Council subsequently chose 175 cities with very poor environmental records to engage with more effort. Three selection criteria were decided according to the environmental performance preceding the regulations. A city was placed under scrutiny if the average annual ambient SO2 concentration was higher than the national Class II standard (0.06mg/m3), if the daily average ambient SO2 concentration exceeded the national Class III standard (0.25mg/m3)\footnote{China uses its air quality standard, which is less stringent than the WHO's standard. China's National Environmental Monitoring Center (CNEMC) has real-time, hourly air quality data for major cities in China. The real-time data is available at \href{http://www.cnemc.cn/}. Major air pollutants, including SO2, NO2, and PM10, are monitored. To evaluate air quality, the Chinese government applies three classes. Class 1 means the yearly SO2 level is less than 0.02 mg/m3, or a daily average of less than 0.05mg/m3. Class 2 is less restrictive. The yearly average should not exceed 0.06 and a daily average of about 0.15. Class 3 is consistent with bad air quality. The yearly average can exceed 0.10 mg/m3, and the daily average is 0.25. By contrast, the WHO recommends a daily average of less than 0.02mg/m3. For the record, exposure to high SO2 levels dangerously affects health. According to the WHO 'SO2 can affect the respiratory system and the functions of the lungs and causes irritation of the eyes. Inflammation of the respiratory tract causes coughing, mucus secretion, aggravation of asthma, and chronic bronchitis and makes people more prone to infections of the respiratory tract.'}, or if the city experienced significant SO2 emissions \footnote{A city was designated as an acid rain control zone if:
+\begin{enumerate}
+\item its average PH value of precipitation was equal or smaller than 4.5;
+\item its sulfate deposition was above the critical load;
+\item its SO2 emissions were large.
+\end{enumerate}
+}. 
+
+These 175 cities are primarily concentrated in two areas: northern China, due to the heavy reliance on coal to power the heating system, and southern China, where the urban-industrial centres emit substantial air pollution and are the source of severe acid rains. These TCZ cities cover 1.09 million square kilometres, in 27 provinces, and they account for 11.4\% of the whole of China's territory.
+
+At the national level, the objectives were the following: the emissions of SO2 were expected to decrease successively in 2000 and 2010, and a special role was devoted to TCZ cities, which were granted the responsibility of achieving the national Class II standard of 0.06mg/m3. The quota of SO2 emissions set by the central government in 2000 should not exceed 24.6 million tonnes – compared with 23.7 million tonnes in 1997 – and emissions in 2010 were expected to decrease even more than emissions in 2000. In 2001, the policymakers strengthened the consistency of the environmental policy called the control policy in the 10th Five-Year-Plan (FYP) (2001-2005). Objectives were set at the national level while their implementation and enforcement were left at the TCZ cities' level.
+
+TCZ cities were allowed to use four methods to achieve pollution reduction targets. They could shut down polluting plants, install new equipment, use cleaner-burning coal and implement stringent monitoring devices. All power stations with a capacity lower than 50,000 kilowatts, or collieries fueled by coal with a sulfur content of 3\%, had to be shut down \footnote{338 small power units, 784 product lines in small cement and glass plants, 404 lines in iron and steel plants, and 1422 additional pollution sources had closed and by May 2001, 4492 high-sulfur coal mines had ceased production in the TCZ area \citep{He2002-ga}}. Furthermore, the central government had the power to cancel construction projects that did not fit the objective of lower SO2 emissions. Industrial plants were forced to meet the environmental standards by installing higher-capacity (more expensive) pollution control equipment \footnote{The second policy is the installation of flue gas desulfurization (FGD) equipment on new and existing coal-fired power plants. At the end of 2005, FGD equipment had been installed on 46.2 GW of coal-fired electricity generation capacity—12 percent of the total \citep{Cao2009-sv}}. Finally, the government carefully monitored the purchase of fuel oil by firms located in TCZ cities. The transportation department was given the charge of supplying fuel oil with a sulfur concentration of less than 2\% or coal with a sulfur concentration of less than 1\%.
+
+The first evaluations of the policy were run in 2000, as reported in  Table \ref{tab:table1}. The emissions of SO2 rose again after a short drop in 1998-1999. By the end of 2000, 102 TCZ cities reached the national Class II standard, while the total industrial SO2 emissions increased by 12\% compared with the previous year \footnote{84.3\% of the most polluting firms achieved the national target in terms of SO2 emissions  (China Environment Yearbook, 2001)}. The entry of China into the WTO in 2001 launched a process of massive industrialisation, economic growth and reduction of poverty \footnote{The WTO membership allows China to achieve some millennium goals}, which was at odds with the achievement of the objective of stricter control over pollution. The consequences of the lack of coordination and the focus on economic growth from the local government led to a historical peak of SO2 emissions in 2005.
+
+The poor results of the environmental policy were attributed to the design of the policy itself. Its main flaw was that the objectives set at the national level were not restrictive enough at the local level. As a result economic growth was strongly emphasised by the central government, which did not provide local municipalities with the incentives to enforce not only economic growth, but also control over pollution. Most of the time, those objectives turned out to be contradictory and could not be achieved contemporaneously \citep{Barbier2019-ce, Brajer2011-wc, Grossman1995-fb, Lee2015-pw}.
+
+\begin{table}[!htbp] \centering
+  \caption{SO2 reduction during the subsequent FYP}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table1}
+    \begin{tabular}{lrrrr}
+      \toprule
+      {} & \multicolumn{2}{l}{Failure} & \multicolumn{1}{l}{Success} \\
+      \hline
+      &      (1998-2000) & (2001-2005) &  (2006-2010) \\
+      \midrule
+      \textbf{TCZ} & & & \\
+      \text{\footnotesize{SO2 target}}       & -     & -     & -14\% &   \\
+      \text{\footnotesize{SO2 \% reduction}} & -7\% & 38\%  & -15\%     &   \\
+
+      \textbf{No TCZ} & & & \\
+      \text{\footnotesize{SO2 target}}       & -     & -     & -4\%  &   \\
+      \text{\footnotesize{SO2 \% reduction}} & 21\%  & 64\%  & -11\%     &   \\
+
+      \textbf{All sample} & & & \\
+      \text{\footnotesize{SO2 target}}       & -     & -10\% & -10\% &   \\
+      \text{\footnotesize{SO2 \% reduction}} & -2\%     & 45\%  & -13\% &   \\
+
+      \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      Sources: Author's own computation \\
+      The list of TCZ is provided by the State Council, 1998. "Official Reply to the State Council Concerning Acid Rain Control Areas and Sulfur Dioxide Pollution Control Areas". The information about the SO2 level are collected using various edition of the China Environment Statistics Yearbook. We compute the reduction of SO2 emission using the same methodology as Chen and al.(2018). 
+    \end{tablenotes}
+\end{table}
+
+In 2006, the central government reconsidered its strategy, changing from a top-down to a bottom-up approach. The two main differences introduced in the 11th FYP (2006-2010) compared with the previous FYP (2001-2005) are the formulation of transparent environmental targets for each TCZ city and the introduction of an environmental target-based evaluation system for the promotion and career achievement of local officials. This target-based evaluation system aims at promoting the efforts toward the objectives considered to be priorities by the central government. It provides a tool for measuring the success of the local administration, making them accountable. The threat imposed by Beijing forces the mayors and party secretaries to adhere to the national policy. 
+
+Local officials in TCZ cities paid more attention to the environmental prejudice of economic growth. This new emphasis on environmental concerns from both the central and local governments was followed by immediate and measurable consequences: over 2006 to 2010 the average growth rate of SO2 emissions fell by -14\% (see Table \ref{tab:table1}), and most TCZ cities (95\%) were able to reach the national Class II standard SO2 concentration, with no cities reporting values above the national Class III standard (Report of Ministry of Environmental Protection of the Peoples Republic of China, \citeyear{Ministry_of_Environmental_Protection_of_the_Peoples_Republic_of_China2011-oi}).
+
+\section{Empirical Specification} \label{sec:empirical}
+
+Our identification strategy is based upon two key elements embodied in the 11th FYP. Indeed, by establishing a clear distinction between TCZ versus non-TCZ cities, the 11th FYP allows us to define a group of treated and control cities. While the treated group (TCZ) is expected to fulfill a set of environmental objectives and is under close governmental scrutiny, the other group (non-TCZ) is not. Moreover, the sharp change in the environmental strategy impulsed by the central government in 2006 split the time span into two sub-periods \footnote{As mentioned in section \ref{sec:Policy} Policy Background; the TCZ policy ended in 2010.}: 2001-2005 corresponding to the 10th FYP and 2006-2010 corresponding to the 11th FYP and the enforcement of the environmental policy. This double characteristic enables us to run a difference-in-difference (DD) analysis.
+
+One concern about this strategy is the influence of the most polluting industries on the probability of a city being designated as a TCZ city. If such a relationship holds, it means that the TCZ policy influences the pattern of SO2 emissions. Still, the presence of firms in the most polluting industries determines the other way around the level of pollution and the probability of being qualified as a TCZ city. To address the resulting endogeneity bias, we add an interaction term, which is the TCZ policy times the 11th FYP period times a dummy capturing the most polluting industries in China. 
+
+China's political pecking order of firms is enforced through the systematic misallocation of financial resources \citep{Dollar2007-dr} with credit allocation being biased in favor of SOEs \citep{Brandt2003-hu, Ferri2009-lh, Hale2011-ma, Huang2003-oa}, whatever their compliance with the governmental objectives of the FYP. SOEs in China enjoy easier access to credit. They also benefit from more substantial bargaining power when it comes to negotiating the pollution tax system \citep{Wang2003-ar, Wang2005-yy}. As a result, SOEs are less sensitive to the environmental regulation hardening because of their stronger bargaining power and easier access to bank funding. 
+
+To assess this lower sensitivity, besides the spatial, industrial, and time dimensions, we add a last but not least ownerships variable – SOEs versus private firms. We argue that SOEs are less likely to react to the environmental regulation because of the soft budget constraint, which dampens the incentive of fighting against pollution and shifts the burden of the environmental adaptation to private companies \footnote{This DDD strategy is used to tackle the endogeneity problem. Regarding Chinese empirical studies, one can refer to \cite{Chen2018-bs,Shi2018-zk, Hering2014-af} or \cite{Cai2016-br}}. The spatial variable captures the SO2 emissions for TCZ versus non-TCZ cities. The industrial variable controls for the bias of having more TCZ cities, be where the most polluting industries are located. The time divide measures the effect of the introduction of more stringent and accountable environmental objectives after 2006 and the launch of the 11th FYP. 
+
+The following is the final specification, its difference-in-difference-in-difference (DDD) design accounts for the four levels of variability: 
+
+\begin{equation} \label{eq:main}
+\begin{aligned} 
+\text {Log SO2 emission }_{i k t}=& \alpha (T C Z_{i} \times \text { Polluting sectors }_{k} \times \text { Period }) \\ &+\beta (T C Z_{i} \times \text { Polluting sectors }_{k} \times \text { Period } \times \text { Share SOE }_{k}) \\ & +\theta {X}_{i k t}+\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt} 
+\end{aligned}
+\end{equation}
+
+Where $\text {Log SO2 emission }_{i k t}$ is the level of SO2 in city $i$, industry $k$ and at time $t$. The equation includes four right-hand-side variables of interest, a set of control variables and fixed effects. $T C Z_{i}$ reflects the TCZ policy implemented in 1998 and amended in 2005. $\text {  Polluting sectors }_{k}$ is a dummy variable taking the value one for heavily polluting industries $k$, and zero for less polluting ones. $\text { Period }$ is a dummy variable, which is set equal to one when $t$ is strictly above 2005. $\text { Share SOE }_{k}$ refers to a proxy for the relative share of SOEs in industry $k$. 
+
+We add three control variables usually found in the literature (Andersen, (\citeyear{Andersen2016-pa, Andersen2017-wf})), which are the $\text{total output}_{ikt}$, $\text{total fixed asset}_{ikt}$, and $\text{employment}_{ikt}$ aggregated at the city $i$, industry $k$ and time $t$. The equation includes a city-year fixed effect $\phi_{it}$, which controls for all city characteristics that differ across cities over time, such as productivity, policies and wages. $\lambda_{kt}$ is an industry-time pair fixed effect which captures the time-varying and time-invariant industry characteristics, e.g., industry-specific technology and government's industrial policies. With the inclusion of fixed effects $\nu_{ik}$, we address the time invariant differences between the cities’ industries, which are key in our approach: while industrial policies are decided at the central level for the whole country, local municipalities orchestrate their implementation differently from one city to another. In our equation, $\epsilon_{ikt}$ represents the error term. This strategy allows us to isolate the effect of stricter environmental policies affecting TCZ cities before and after the 11th FYP. More importantly for the purpose at hand, it allows us to compare the sensitivity of the firm’s ownership to the enforcement of the environmental regulation, on the emissions of SO2.
+
+We expect the coefficient $\alpha$ to be negative and $\beta$ to be positive. TCZ cities emit less SO2 after 2005 in more polluting industries with a larger presence of private firms because policymakers put more pressure on them, while SOEs enjoy a softer budget constraint, hence cope more easily with the regulation. In all regressions, the standard errors are clustered by industry.
+
+\section{Data} \label{sec:data}
+
+Our key interest is the SO2 emissions, which are available at the city–industry–year level. Using various data sources, we construct a dataset including environmental, industrial and economic information at the city–industry–year level over the period 2002 to 2007.
+
+\subsection{SO2 emissions} \label{sec:so2}
+
+The Ministry of Environmental Protection (MEP) has mandated the State Environmental Protection Agency (SEPA) to collect data on the primary sources of pollutants and waste in China since 1980. The SEPA has monitored firms in 39 major industrial sectors that are considered to be heavy polluters. These firms are required to report basic information, such as company name, address, and output. They also answer a very detailed questionnaire about their emissions of major pollutants (e.g. wastewater, COD, SO2, industrial smoke, and dust). 
+
+As reported by \cite{Wu2017-bl} and by \cite{Jiang2014-pf}, the resulting dataset embodies 85\% of the emissions of the major pollutants in China. The MEP has implemented strict procedures, such as unexpected visits from experts, to ensure that firms do not misreport their emissions. Having access to the statistics of SO2, a primary air pollutant, our left-hand side variable is $\text {Log SO2 emission }_{i k t}$, which is the logarithm of S02 emissions in city $i$, industry $k$, and year $t$, for 296 four-digits industries, across 228 cities from 2002 to 2007. We define $\text {  Polluting sectors }_{k}$ equal to one when an industry emits more than 68,070 tonnes of SO2 (top 25\% most polluting sectors). 
+
+The emissions of SO2 reached a peak in 2005 at 32.41 million tonnes (China Statistical Yearbook on Environment, 2005). Out of the 522 cities monitored by the Chinese Ministry of Environment, about 400 reported an annual average level of SO2 that met the Grade II national standard (0.06mg/m3) and 33 cities met the worst grade (0.10mg/m3). Two years after the 11th FYP was launched, the situation had slightly changed, according to the Ministry of Environment in its annual report on the state of the environment in China \footnote{The report is available \href{http://english.mee.gov.cn/Resources/Reports/soe/soe2007/201}{here}}. 79\% of the audited cities met Grade II, which is two percentage points better than in 2005. In regards to the Grade III criteria, less than 1.2\% of the cities were above the threshold, which corresponds to an improvement of four percentage points from 2005. The most polluted cities are located in Shanxi, Guizhou, Inner Mongolia, and Yunnan provinces.
+
+\subsection{Ownership} \label{sec:ownership}
+
+The National Bureau of Statistics of China (NBS) distinguishes manufacturing data with sales above RMB 5 million for non-SOEs and SOEs. The survey contains detailed information about the name, address, four-digit Chinese industrial classification (CIC), ownership, financial variables, output, sales, fixed assets, etc. 
+
+For $\text{share SOE}_k$, we rely on three proxies. The first is SOEs industrial average share of output ($\text{output share SOE}_k$). Alternatively, we compute the SOEs industrial average share of employment ($\text{labour share SOE}_k$), and capital ($\text{capital share SOE}_k$). For instance, the output of the tobacco industry is almost entirely produced by SOEs (96\%), while the transport equipment industry is more balanced with only 40\% of the output produced by SOEs.
+
+\subsection{Two Control Zone} \label{sec:tcz}
+
+In 1998, the State Council launched a vast policy to curb SO2 emissions and to reduce the acid rain. There were 175 cities called TCZ cities located in 27 provinces designated to provide the subsequent effort for controlling SO2 emissions. Out of the 228 cities in our dataset, 140 are qualified as TCZ cities. Table \ref{tab:appendix1} in the appendix provides the list of TCZ cities present in our dataset. $T C Z_{i}$ is a dummy set equal to one if city $i$ belongs to this list. 
+
+\begin{table}[!htbp] \centering
+    \caption{ Summary Statistics by city-industry and city characteristics}
+      \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table2}
+    \begin{tabular}{lrrrr}
+      \multicolumn{1}{l}{\textbf{\small Panel A: City/city-industry}} \\
+      \toprule
+      & \multicolumn{2}{c}{No TCZ} & \multicolumn{2}{c}{TCZ} \\
+      & \multicolumn{1}{c}{mean} & \multicolumn{1}{c}{std} & \multicolumn{1}{c}{mean} & \multicolumn{1}{c}{std}\\
+      %{}                         & mean   & std    & mean   & std    \\
+      \midrule
+      $SO2_{ikt}$                  & 182,873 & 372,028 & 174,308 & 357,225 \\
+      $\text{count share SOE}_k$   & 0.093  & 0.094  & 0.082  & 0.086  \\
+      $\text{output share SOE}_k$  & 0.147  & 0.153  & 0.136  & 0.151  \\
+      $\text{capital share SOE}_k$ & 0.220  & 0.197  & 0.209  & 0.198  \\
+      $\text{labour share SOE}_k$  & 0.188  & 0.162  & 0.176  & 0.162  \\
+      $\text{output}_{kit}$        & 0.028  & 0.101  & 0.058  & 0.266  \\
+      $\text{capital}_{kit}$       & 0.008  & 0.030  & 0.014  & 0.054  \\
+      $\text{labour}_{kit}$        & 0.009  & 0.024  & 0.016  & 0.056  \\
+      \bottomrule
+      \\ %%% Create second table
+      \multicolumn{1}{l}{\textbf{\small Panel B: SO2 emission by city-location}} \\
+      \toprule
+      {} & \multicolumn{2}{l}{\footnotesize difference (10.000 tons units)} & \multicolumn{2}{l}{variance (\footnotesize \%)} \\
+      %& \multicolumn{1}{l}{No TCZ} & \multicolumn{1}{l}{TCZ} & %\multicolumn{1}{l}{No TCZ} & \multicolumn{1}{l}{TCZ}\\
+                  & No TCZ   & TCZ      & No TCZ & TCZ  \\
+      Location    &          &          &        &      \\
+      \midrule
+      Full sample &    -192 & -436 &     0.22 & 0.26 \\
+      Central     &    -238 & -232 &     0.25 & 0.19 \\
+      Coastal     &    -138 & -659 &     0.12 & 0.29 \\
+      Northeast   &    -206 &  -89 &     0.30 & 0.08 \\
+      Northwest   &    -115 & -277 &     0.21 & 0.31 \\
+      Southwest   &    -272 & -503 &     0.31 & 0.29 \\
+      Non Coastal &    -215 & -302 &     0.28 & 0.23 \\
+      Coastal     &    -140 & -578 &     0.13 & 0.28 \\
+      \bottomrule
+      \hline
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      Sources: Author's own computation \\
+      Panel A provides summary statistics for the main variables used in the subsequent empirical analysis. \\
+  Panel B provides summary statistics for the SO2 emission (in 10.000 tons) for Chinese cities (228), split into TCZ (140) and non-TCZ (88) cities
+      \\
+    \end{tablenotes}
+\end{table}
+
+Table \ref{tab:table2} Panel A provides information about the characteristics of TCZ and non-TCZ cities. Not only do TCZ cities emit less SO2 over the entire period, but they are also wealthier and more populated. The reason behind the lower level of SO2 emissions is twofold. First, TCZ cities are, by definition, making more effort to execute stringent environmental regulations. Second, the relationship between wealth and the demand for cleaner environmental goods is known to be positive. In the Chinese case, the evidence is provided in \cite{Hering2014-af}. TCZ and richer cities should therefore emit less SO2. In section \ref{sec:robustness}, robustness checks section, we include yearly GDP per capita and population at the city level. The data are borrowed from the China City Statistical Yearbooks 2002–2007.
+
+Panel B (Table \ref{tab:table2}) displays a regional break down of SO2 emissions for TCZ versus non-TCZ cities and for both periods (before and after the 11th FYP). We note that the emissions of SO2 have decreased in both TCZ and non-TCZ cities after the implementation of the 11th FYP. TCZ cities have contributed more to the overall decrease with a reduction by four points higher than non-TCZ cities (or 436 fewer tonnes of SO2 for TCZ versus 191 for non-TCZ). 
+
+Furthermore, Panel B also gives a more in-depth overview of the SO2 reduction in the major areas of China. Following \cite{Wu2017-bl}, we split the cities between Coastal, Southwest, Central, Northeast, and Northwest areas \footnote{This province breakdown follows the paper of \cite{Wu2017-bl}. The Central provinces are Anhui, Henan, Hubei, Hunan, Jiangxi, and Shanxi. The Coastal provinces are Beijing, Fujian, Guangdong, Hainan Hebei, Jiangsu, Shandong, Shanghai, Tianjin, and Zhejiang. The Northeastern provinces are Heilongjiang, Jilin, Liaoning. Northwest are Gansu, Inner Mongolia, Ningxia, Qinghai, Shaanxi, and Xinjiang. The Southwestern parts are Chongqing, Guangxi, Guizhou, Sichuan, Yunnan, and Xizang.}. In our sample, the Coastal area of China is composed of ten provinces and has a total of 68 TCZ cities. This area is the wealthiest part of China: it represents the lion's share of national production and attracts the most significant foreign investment flows.
+
+The Southwestern area has five provinces and 24 TCZ cities, while the Central area has six provinces and 38 TCZ cities. The Northern part of China is split into its Western area with six provinces and 13 TCZ cities and Eastern area with three provinces and 11 TCZ cities. 
+
+By the end of the 11th FYP, TCZ cities located in the Coastal and Northwest parts of China have been more successful than non-TCZ cities in reducing their SO2 emissions. By contrast, TCZ cities located in the Central part of China have not performed better than non-TCZ cities (the decrease of SO2 emissions has been -231 for the former and -238 for the latter).
+
+\subsection{Control variables} \label{sec:control}
+
+The literature has listed the key determinants of environmental degradation at the firm level (see, for instance, Cole and Elliott, \citeyear{Cole2003-ad} and Cole et al, \citeyear{Cole2008-pj}). Capital intensity affects both the emissions and intensity of pollution \citep{Hering2014-af, Andersen2017-wf}. Firms' size matters: large industries emit more pollutants. The sectoral belonging matters as well, and we use NBS industrial classification to sort firms according to the sector they belong to. We rely on the 2002 four-digit CIC and compute total employment, total output, and total net fixed assets, aggregated at the city-industry-year level. The information is generated from the Annual Survey of Industrial Firms (ASIF) conducted by China's NBS for the period from 2003 - 2007. As reflected in Table \ref{tab:table2} (Panel A), TCZ cities produce and employ more resources.
+
+\section{Empirical Analysis} \label{sec:analysis}
+
+\subsection{Main results}
+
+Table \ref{tab:table3} reports the results of equation \ref{eq:main}. The coefficient of interest measures the effect of the environmental policy on the emissions of SO2 in the polluting sectors, with a particular emphasis on sectors dominated by SOEs. The triple interaction terms $(T C Z_{i} \times \text {  Polluting sectors }_{k} \times \text { Period })$ estimates are all negative and significant, meaning that SO2 emissions felt more significantly in TCZ cities than in non-TCZ cities after the launch of the 11th FYP, in line with our expectations.
+
+Our key assumption is that the effectiveness of the policy is lower in sectors dominated by SOEs, which face a softer budget constraint. We expect, therefore a less negative coefficient (smaller in absolute value) for those sectors. To test this assumption we interact $T C Z_{i} \times \text {  Polluting sectors }_{k} \times \text { Period }$ with the three proxies of the firms' ownerships: in column 1 are SOEs' industrial output share, in columns 2 and 3 are SOEs' share of capital or labour respectively. The four coefficients of interest are all positive and significant, meaning that the policy is attenuated in the polluting sectors where the presence of SOEs is strong. Those firms enjoy preferential treatment and can adopt business strategies less constrained by the new regulation than private firms. They do not need to reduce, cut or relocate the production because they receive financial support from the local government. Softer credit constraint helps them to absorb the costs linked to the policy more efficiently.
+
+\begin{table}[!htb] \centering
+  \caption{Soft budget constraint as reflected in the SOEs’ reaction to the TCZ policy in China: Baseline result
+}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table3}
+    \begin{tabular}{@{\extracolsep{5pt}}lccc}
+      \\[-1.8ex]\hline
+      \hline \\[-1.8ex]
+      & \multicolumn{3}{c}{The Dependent variable: $\text{Ln SO2}_{ikt}$} \\
+      \cline{2-4}
+      \\[-1.8ex] & Output & Capital & Labour \\
+      \\[-1.8ex] & (1) & (2) & (3) \\
+      \hline \\[-1.8ex]
+      $\text{output}_{ikt}$                                                                                  & $-$0.059        & $-$0.059        & $-$0.059        \\
+                                                                                                    & (0.114)         & (0.114)         & (0.113)         \\
+      $\text{capital}_{ikt}$                                                                                 & 0.929$^{*}$     & 0.933$^{**}$    & 0.937$^{**}$    \\
+                                                                                                    & (0.476)         & (0.475)         & (0.474)         \\
+      $\text{labour}_{ikt}$                                                                                  & 1.550           & 1.545           & 1.538           \\
+                                                                                                    & (1.023)         & (1.023)         & (1.021)         \\
+      $TCZ_i \times \text{Polluting}_k \times \text{Period}$                                           & $-$0.298$^{**}$ & $-$0.336$^{**}$ & $-$0.377$^{**}$ \\
+                                                                                                    & (0.142)         & (0.154)         & (0.154)         \\
+      $TCZ_i \times \text{output share SOE}_{k} \times \text{Period}$                                 & $-$0.824        &                 &                 \\
+                                                                                                    & (0.515)         &                 &                 \\
+      $TCZ_i \times \text{Polluting}_k \times \text{output share SOE}_{k} \times \text{Period}$        & 1.315$^{**}$    &                 &                 \\
+                                                                                                    & (0.609)         &                 &                 \\
+      $TCZ_i \times \text{capital share SOE}_{k} \times \text{Period}$                                &                 & $-$0.682$^{*}$  &                 \\
+                                                                                                    &                 & (0.399)         &                 \\
+      $TCZ_i \times \text{Polluting}_k \times \text{capital share SOE}_{k} \times \text{Period}$       &                 & 1.065$^{**}$    &                 \\
+                                                                                                    &                 & (0.513)         &                 \\
+      $TCZ_i \times \text{labour share SOE}_{k} \times \text{Period}$                                 &                 &                 & $-$1.020$^{**}$ \\
+                                                                                                    &                 &                 & (0.518)         \\
+      $TCZ_i \times \text{Polluting}_k \times \text{labour share SOE}_{k} \times \text{Period}$        &                 &                 & 1.532$^{**}$    \\
+                                                                                                    &                 &                 & (0.598)         \\
+      \hline \\[-1.8ex]
+      city-year fixed effects                                                                       & Yes             & Yes             & Yes             \\
+      Industry-year fixed effects                                                                   & Yes             & Yes             & Yes             \\
+      city-industry fixed effects                                                                   & Yes             & Yes             & Yes             \\
+      Observations                                                                                  & 30,676          & 30,676          & 30,676          \\
+      R$^{2}$                                                                                       & 0.851           & 0.851           & 0.851           \\
+      \hline
+      \hline \\[-1.8ex]
+      \end{tabular}
+  \end{adjustbox}
+  \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+    \end{tablenotes}
+\end{table}
+
+The control system implemented by the 11th FYP significantly decreases the emission of SO2. The coefficient of $T C Z_{i} \times \text {  Polluting sectors }_{k} \times \text { Period }$ takes two values: -.29 (column 1) and -.37 (column 3), which represents a reduction of SO2 ranging from respectively -7,629 (29\% of the average SO2 emissions of a city polluting industry) to -9,652 tonnes (37\%)\footnote{The average 2005 emissions of SO2 for the polluting industries $k$ located in city $i$ is equal to 25.603 tonnes, the reduction of pollution is straightforward: $-.298 * 25.603 = -7,629$ tonnes for column 2, and $-.377*25.603 = -9,652$ for columns 3. These figures are comparable to the official figures which refers to the whole economy, see table \ref{tab:table1}.}. 
+
+The output share of SOEs in the polluting sectors varies from 1.3\% to 33\%. Also, given the estimates of equation 1 in Table 3, the environmental policy's effect is smaller where the state size is more prominent. According to a straightforward formula\footnote{The formula is $\beta * (\text{output share SOE}^{\text{90 percentile}^{th}}_k- \text{output share SOE}^{\text{10 percentile}^{th}}_k)$ when $\beta$ is equal to 1.315: $42\% = 1.135* (0.33 - 0.013)$ table \ref{tab:table3} column 1.}, it is smaller by 42\%. This decline in policy efficiency is imputable to the soft budget constraint.
+
+Other control variables have the expected signs: economic growth has severely degraded the environment; GDP, employment and fixed assets are correlated with more emissions of SO2. The inclusion of these variables does not affect the main coefficient of interest.
+
+\subsection{Testing for parallel trends} \label{sec:parallel}
+
+We must check that our strategy satisfies the parallel trends assumption, by showing that TCZ and non-TCZ cities have a similar SO2 emissions trajectories before the treatment (i.e., before the introduction of stringent environmental regulations). One might think for instance, that certain local governments anticipated the implementation of the environmental regulation and decided to enforce it before the treatment year. The test for the parallel trend assumption consists of replacing the treatment variable $\text { Period }$ with yearly dummies. The new specification becomes:
+
+\begin{equation} \label{eq:paralleltrend}
+\begin{aligned} 
+\text {Log SO2 emission }_{i k t}=\sum_{t=2002}^{2007} \alpha (T C Z_{i}  \times \text {  Polluting sectors }_{k} \times year _{t}) + \\ 
+\theta {X}_{i k t}+\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt} 
+\end{aligned}
+\end{equation}
+In which $year_t$ is a dummy set equal to one with $t$ ranging from the year 2002 to 2007. 
+
+\begin{table}[!htb] \centering
+  \caption{Parallel trend}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table4}
+    \begin{tabular}{@{\extracolsep{5pt}}lccc}
+      \\[-1.8ex]\hline
+      \hline \\[-1.8ex]
+      & \multicolumn{3}{c}{The Dependent variable: $\text{Ln SO2}_{ikt}$} \\
+      \cline{2-4}
+      \\[-1.8ex] & (1) & (2) & (3)\\
+      \\[-1.8ex] & (All sample) & (TCZ) & (No TCZ)\\
+      \\[-1.8ex] & $(TCZ_i \times \text{Polluting}_k \times Year)$ & $(Polluting_k \times Year)$ & $(Polluting_k \times Year)$\\
+      \hline \\[-1.8ex]
+      2003                        & $-$0.409       & $-$0.091       & 0.228   \\
+                                  & (0.272)        & (0.115)        & (0.259) \\
+      2004                        & $-$0.253       & $-$0.098       & 0.078   \\
+                                  & (0.287)        & (0.112)        & (0.308) \\
+      2005                        & $-$0.420       & $-$0.153       & 0.178   \\
+                                  & (0.263)        & (0.127)        & (0.272) \\
+      2006                        & $-$0.503$^{*}$ & $-$0.211       & 0.159   \\
+                                  & (0.270)        & (0.129)        & (0.288) \\
+      2007                        & $-$0.460       & $-$0.246$^{*}$ & 0.127   \\
+                                  & (0.303)        & (0.145)        & (0.312) \\
+      \hline \\[-1.8ex]
+      City-year fixed effects     & Yes            & Yes            & Yes     \\
+      Industry-year fixed effects & Yes            & No             & No      \\
+      City-industry fixed effects & Yes            & Yes            & Yes     \\
+      Observations                & 30,676         & 23,333         & 7,343   \\
+      R$^{2}$                     & 0.851          & 0.827          & 0.861   \\
+      \hline
+      \hline \\[-1.8ex]
+      \end{tabular}
+  \end{adjustbox}
+  \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+    \end{tablenotes}
+\end{table}
+
+The estimate of $\alpha$ captures the log of SO2 emissions in the whole sample and in the subsample of TCZ and non-TCZ cities before the policy was implemented. If the parallel trend assumption holds, the coefficient $\alpha$ should not be significant before 2006. Table \ref{tab:table4} reports the results. The coefficients are all insignificant at the usual levels before the treatment year, validating the parallel trend assumption. In the two remaining columns, we split our sample between TCZ cities (column 2) and non-TCZ cities (column 3). In column 2, the coefficients for TCZ cities are negative and significant only in 2007, suggesting the early effect of the policy immediately one year after its introduction. By contrast, the policy did not affect the cities not targeted by the control policies (non-TCZ cities in column 3). Estimates are obtained from specifications that control for output, fixed assets and employment.
+
+\subsection{Robustness checks} \label{sec:robustness}
+
+Table \ref{tab:table5} provides evidence that our results are robust with the inclusion of extra city controls. We consider two additional controls: Special Policies Zone (SPZ) cities and the proximity to the sea which can blur the effect we are interested in (namely the effect of the TCZ policy for private firms versus SOEs).
+
+'Go West' refers to a strategy launched in 2000, when the Chinese government decided to boost the economy of the western areas by pouring billions of US dollars into infrastructure, roads, facilities, and improving the skills of the workers \citep{Chen2018-bs}. This strategy provides incentives to firms, and more particularly, SOEs to downsize the production in favour of these new (attractive) cities located in China's Western hinterlands. We consider 
+ $Coastal_i$ which is one if city $i$ is away from the hinterland and close to the sea, which has historically always been a very attractive area.
+ 
+ The other policy is called SPZ. It aims at boosting the attractiveness of SPZ cities for foreign firms, exporters, or high tech firms, which benefit from lower taxes, access to cheaper credits, or subsidies, amongst others \citep{Wang2008-gv, Hering2014-af}\footnote{Those SPZ include High-technology Industry Development Areas, Economic and Technological Development Areas, and Export Processing Zones}. We define $SPZ_i$ equal to one if city $i$ belongs to the SPZ. In our sample we have 59 SPZ cities, and 35 cities adjacent to the sea.
+ 
+\begin{table}[!htb] \centering
+  \caption{Soft budget constraint as reflected in the SOEs’ reaction to the SPZs’ and coastal area’s policies in China}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table5}
+    \begin{tabular}{@{\extracolsep{5pt}}lcccc}
+      \\[-1.8ex]\hline
+      \hline \\[-1.8ex]
+      & \multicolumn{3}{c}{The Dependent variable: $\text{Ln SO2}_{ikt}$} \\
+      \cline{2-4}
+      \\[-1.8ex] & Output & Capital & Labour \\
+      \\[-1.8ex] & (1) & (2) & (3) \\
+      \hline \\[-1.8ex]
+      $TCZ_i \times \text{Period} \times \text{Polluting}_k$                                         & $-$0.320$^{**}$ & $-$0.331$^{**}$ & $-$0.378$^{**}$ \\
+                                                                                                  & (0.145)         & (0.155)         & (0.160)         \\
+      $SPZ_i \times \text{Period} \times \text{Polluting}_k$                                         & 0.070           & 0.004           & 0.019           \\
+                                                                                                  & (0.147)         & (0.155)         & (0.161)         \\
+      $Coastal_i \times \text{Period} \times \text{Polluting}_k$                                     & $-$0.034        & $-$0.034        & $-$0.044        \\
+                                                                                                  & (0.150)         & (0.153)         & (0.161)         \\
+      $TCZ_i \times \text{Period} \times \text{Polluting}_k \times \text{output share SOE}_{k}$      & 1.305$^{*}$     &                 &                 \\
+                                                                                                  & (0.749)         &                 &                 \\
+      $SPZ_i \times \text{Period} \times \text{Polluting}_k \times \text{output share SOE}_{k}$      & 0.300           &                 &                 \\
+                                                                                                  & (0.689)         &                 &                 \\
+      $Coastal_i \times \text{Period} \times \text{Polluting}_k \times \text{output share SOE}_{k}$  & $-$0.327        &                 &                 \\
+                                                                                                  & (0.774)         &                 &                 \\
+      $TCZ_i \times \text{Period} \times \text{Polluting}_k \times \text{capital share SOE}_{k}$     &                 & 0.924           &                 \\
+                                                                                                  &                 & (0.595)         &                 \\
+      $SPZ_i \times \text{Period} \times \text{Polluting}_k \times \text{capital share SOE}_{k}$     &                 & 0.477           &                 \\
+                                                                                                  &                 & (0.544)         &                 \\
+      $Coastal_i \times \text{Period} \times \text{Polluting}_k \times \text{capital share SOE}_{k}$ &                 & $-$0.150        &                 \\
+                                                                                                  &                 & (0.559)         &                 \\
+      $TCZ_i \times \text{Period} \times \text{Polluting}_k \times \text{labour share SOE}_{k}$      &                 &                 & 1.391$^{*}$     \\
+                                                                                                  &                 &                 & (0.725)         \\
+      $SPZ_i \times \text{Period} \times \text{Polluting}_k \times \text{labour share SOE}_{k}$      &                 &                 & 0.525           \\
+                                                                                                  &                 &                 & (0.666)         \\
+      $Coastal_i \times \text{Period} \times \text{Polluting}_k \times \text{labour share SOE}_{k}$  &                 &                 & $-$0.142        \\
+                                                                                                  &                 &                 & (0.723)         \\
+      \hline \\[-1.8ex]
+      City-year fixed effects                                                                     & Yes             & Yes             & Yes             \\
+      Industry-year fixed effects                                                                 & Yes             & Yes             & Yes             \\
+      City-industry fixed effects                                                                 & Yes             & Yes             & Yes             \\
+      Observations                                                                                & 30,676          & 30,676          & 30,676          \\
+      R$^{2}$                                                                                     & 0.851           & 0.851           & 0.852           \\
+      \hline
+      \hline \\[-1.8ex]
+      \end{tabular}
+  \end{adjustbox}
+  \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+    \end{tablenotes}
+\end{table}
+
+We add to our baseline equation the interaction between the TCZ policy, the post-treatment dummy (Period) and separately $SPZ_i$, and $Coastal_i$. We also interact $SPZ_i$ and $Coastal_i$ with our proxy for the industrial firm's ownership. None of the newly added interaction terms affect our coefficients of interest: the effect of the new environmental system in the TCZ cities remains robust across the different specifications (columns 1 to 3). More importantly, it is less effective in sectors with a large share of SOEs (as suggested by the coefficients of $\text {  Polluting sectors }_{k} \times \text { Period } \times \text { Share SOE }_{k}$).
+
+\begin{table}[!htb] \centering
+  \caption{Environmental policy, Wealth and Population pressure}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table6}
+    \begin{tabular}{@{\extracolsep{5pt}}lcccc}
+      \\[-1.8ex]\hline
+      \hline \\[-1.8ex]
+      & \multicolumn{3}{c}{The Dependent variable: $\text{Ln SO2}_{ikt}$} \\
+      \cline{2-4}
+      \\[-1.8ex] & Output & Capital & Labour \\
+      \\[-1.8ex] & (1) & (2) & (3) \\
+      \hline \\[-1.8ex]
+      $\text{Polluting}_k \times \text{ln gdp per cap}_{it}$                                     & $-$0.034        & $-$0.029        & $-$0.036        \\
+                                                                                              & (0.298)         & (0.298)         & (0.297)         \\
+      $\text{Polluting}_k \times \text{ln population}_{it}$                                      & 0.170           & 0.172           & 0.172           \\
+                                                                                              & (0.228)         & (0.228)         & (0.228)         \\
+      $TCZ_i \times \text{Period} \times \text{Polluting}_k$                                     & $-$0.280$^{**}$ & $-$0.317$^{**}$ & $-$0.360$^{**}$ \\
+                                                                                              & (0.142)         & (0.151)         & (0.156)         \\
+      $TCZ_i \times \text{Period} \times \text{output share SOE}_{k}$                           &   $-$0.842      &                 &                 \\
+                                                                                              &  (0.574)        &                 &                 \\
+      $TCZ_i \times \text{Period} \times \text{Polluting}_k \times \text{output share SOE}_{k}$  & 1.327$^{*}$     &                 &                 \\
+                                                                                              & (0.731)         &                 &                 \\
+      $TCZ_i \times \text{Period} \times \text{capital share SOE}_{k}$                          &                 & $-$0.707        &                 \\
+                                                                                              &                 & (0.438)         &                 \\
+      $TCZ_i \times \text{Period} \times \text{Polluting}_k \times \text{capital share SOE}_{k}$ &                 & 1.074$^{*}$     &                 \\
+                                                                                              &                 & (0.577)         &                 \\
+      $TCZ_i \times \text{Period} \times \text{labour share SOE}_{k}$                           &                 &                 & $-$1.044$^{*}$  \\
+                                                                                              &                 &                 & (0.562)         \\
+      $TCZ_i \times \text{Period} \times \text{Polluting}_k \times \text{labour share SOE}_{k}$  &                 &                 & 1.545$^{**}$    \\
+                                                                                              &                 &                 & (0.709)         \\
+      \hline \\[-1.8ex]
+      City-year fixed effects                                                                 & Yes             & Yes             & Yes             \\
+      Industry-year fixed effects                                                             & Yes             & Yes             & Yes             \\
+      City-industry fixed effects                                                             & Yes             & Yes             & Yes             \\
+      Observations                                                                            & 30,195          & 30,195          & 30,195          \\
+      R$^{2}$                                                                                 & 0.852           & 0.852           & 0.852           \\
+      \hline
+      \hline \\[-1.8ex]
+      \end{tabular}
+  \end{adjustbox}
+  \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+    \end{tablenotes}
+\end{table}
+
+In Table \ref{tab:table6}, we address the concern of the correlation between the wealth of the inhabitants and the sensitivity to the environment. Empirical evidence about this correlation is extensive and is widely reported in the literature: wealthier households have the financial capacity to consume in line with their preferences for goods and services that protect the environment \citep{Berger2019-jl, Chen2018-bs}, they can escape from polluted cities \citep{Chen2017-ro}. 
+
+Also, the congestion effect puts pressure on the price of land, input, rent, and labour costs, harming the most vulnerable and less profitable firms \citep{Fujita2013-sn, Guimaraes2000-px}, which may not have the option to relocate to where the cost of inputs is cheaper. To address these concerns, we add in our specification the interaction $\text{ln gdp per cap}_{it}$ and $\text{ln population}_{it}$ times the dummy $Polluting_k$. There is a slight drop in observations because of some missing values of GDP per capita. The two coefficients of interest remain stable and significant, stating that the effect of the regulation is robust, the reaction of private firms is stronger and that of SOEs is weaker.
+
+Finally, we test whether our results hold when we run separate regressions for two different subsamples. The first sample contains firms belonging to sectors dominated by SOEs and the second sample includes firms belonging to sectors dominated by private firms. We define the sectors with an above-average SOEs industrial share of output, capital, or labour as being dominated by SOEs\footnote{The average SOE’s share of output is equal to 0.14, capital is equal to 0.22 and labour is 0.19}. Our sample gathers 92 four-digit industries dominated by SOEs when computed with the output share, 104 with the capital share, and 98 with the labour share.
+
+Panel A in Table \ref{tab:table7} validates our assumption – SOEs are not affected by environmental policies. As in the previous tables, the triple interaction term is negative but not significant. However, as reported in Panel B, the regulation effect is negative and significant for industries dominated by private ownership.
+
+
+\begin{table}[!htb] \centering
+  %\resizebox{1\textwidth}{!}{
+    %\begin{threeparttable}
+    \caption{State versus private sectors}
+      \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+     \label{tab:table7}
+      \begin{tabular}{lrrrr}
+        \multicolumn{1}{l}{\textbf{Panel A: SOE Dominating sectors}} \\
+        \toprule
+        & \multicolumn{3}{c}{The Dependent variable: $\text{Ln SO2}_{ikt}$} \\
+        \cline{2-4}
+        \\[-1.8ex] & (1) & (2) & (3) \\
+        \\[-1.8ex] & (Output) & (Capital) & (Labour)\\
+        \hline \\[-1.8ex]
+        $TCZ_i \times \text{Polluting}_k \times \text{Period}$ & 0.101           & 0.114           & 0.235           \\
+                                                            & (0.234)         & (0.229)         & (0.232)         \\
+        \hline \\[-1.8ex]
+        City-year fixed effects                             & Yes             & Yes             & Yes             \\
+        Industry-year fixed effects                         & Yes             & Yes             & Yes             \\
+        City-industry fixed effects                         & Yes             & Yes             & Yes             \\
+        Observations                                        & 9,824           & 10,423          & 10,076          \\
+        Number sectors                                      & 92              & 104             & 98              \\
+        R$^{2}$                                             & 0.865           & 0.869           & 0.862           \\
+        \bottomrule
+        \\ %%% Create second table
+        \multicolumn{1}{l}{\textbf{Panel B: Prviate Dominating sectors}} \\
+        \toprule
+        & \multicolumn{3}{c}{The Dependent variable: $Ln SO2_{ikt}$} \\
+        \cline{2-4}
+        \\[-1.8ex] & (1) & (2) & (3)\\
+        \\[-1.8ex] &  (Output)& (Capital) & (Labour) \\
+        \hline \\[-1.8ex]
+        $TCZ_i \times \text{Polluting}_k \times \text{Period}$ & $-$0.243$^{**}$ & $-$0.272$^{**}$ & $-$0.284$^{**}$ \\
+                                                            & (0.124)         & (0.124)         & (0.125)         \\
+        \hline \\[-1.8ex]
+        City-year fixed effects                             & Yes             & Yes             & Yes             \\
+        Industry-year fixed effects                         & Yes             & Yes             & Yes             \\
+        City-industry fixed effects                         & Yes             & Yes             & Yes             \\
+        Observations                                        & 20,852          & 20,253          & 20,600          \\
+        Number sectors                                      & 204             & 192             & 198             \\
+        R$^{2}$                                             & 0.857           & 0.853           & 0.858           \\
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+    \end{tablenotes}
+\end{table}
+
+\section{Diffusion channels: new administrative regulations and TFP} \label{sec:channels}
+
+Two diffusion channels are scrutinised in this section: first the SO2 pollution reduction guideline provided by the central government that aligns the motivations of the bureaucrats with the environmental policy; second the investment in technological performance induced by the environmental policy, which is reflected in the causality running from the environmental policy to total factor productivity (TFP).
+
+\subsection{New incentives to the bureaucrats: the TCZ policy } \label{sec:bureaucrats}
+
+Throughout the 10th FYP, the environmental policy was seen as a failure, as it led to a sharp increase in SO2 emissions in 2005, as compared with the 2001 level. The lack of cohesion between the central government objectives and environmental law enforcement at the local level was seen as one reason behind this failure. In 2005, the central government decided to introduce environmental performance indicators to balance the trade-off of growth vs. the emissions' reduction goal. 
+
+The literature has provided extensive research on the motivations of bureaucrats to implement a policy. \cite{Dewatripont1999-nq,Dewatripont2000-ax, Alesina2007-xp} are among the first to argue that the features of the mandated tasks largely drive bureaucrats' performance and efforts. The missions must be embedded in a precise interpretation scheme and be linked to performance measures. According to \cite{Alesina2008-eq}, bureaucrats choose their effort level according to two parameters: a concrete objective to reach and the weight of each task in the likelihood to move up the hierarchical leadership ladder. 
+
+In 2006, the central government provided a clear SO2 pollution reduction guideline for the provinces in China, called the TCZ policy, which the government used to deepen its political ties with the local cadres and to guarantee the fulfillment of the pollution reduction targets. The document stipulated that the provincial leaders had a binding contract with the Ministry of Environment and would bear the responsibility for any failure. Since the guideline and the reduction mandates are not available at the city $i$ level, but at the provincial level, we apply the following formula:
+
+\begin{equation} \label{eq:mandate}
+\Delta SO2_{i, 05 − 10}=\Delta SO2_{p, 05 − 10} \times \sum_{k=1}^{29} \mu_{k} \frac{\text { output value of industry } k \text { in city } i}{\text { output value of industry } k \text { in province } p}
+\end{equation}
+
+where $i$ stands for city, $p$ for province and $k$ for the two-digit industry. The left-hand side of the formula evaluates how much a city should reduce its SO2 emissions by between the years 2005 and 2010, and is expressed in 10,000 tonnes. For instance, according to the information available, the province of Shanghai is expected to reduce its SO2 emissions by 13,000 tonnes over the period 2005-2010.
+
+$\Delta SO2_{p, 05 − 10}$ refers to the official mandate at the provincial level and is expressed in 10,000 tonnes. It is available for the 31 provinces of China and for two years, 2005 and 2010. $\sum_{k=1}^{29} \mu_{k} \frac{\text { output value of industry } k \text { in city } i}{\text { output value of industry } k \text { in province } p}$ is the share of industrial production $k$, in city $i$ over the total output of $k$ in province $p$. The weight, $\mu_{k}$ reflect each k industry's contribution to the total industrial SO2 emissions\footnote{We use the ASIF survey data to construct output share by industry for all the 298 cities of our dataset. The SO2 industry share is measured from the MEP dataset using the year 2005. Table \ref{tab:so2share} available in the appendix}. 
+
+Not surprisingly, the decrease in SO2 emissions required in an average TCZ city is significantly higher: 1,600 tonnes, but only 600 for an average non-TCZ city. 
+
+To estimate the impact of the new administrative regulations on the logarithm of SO2 emissions, we estimate equation \ref{eq:citymandate}, similar to equation \ref{eq:main}, where we replace the $TCZ_i$ variable by the city reduction mandate, $target_i$. 
+
+\begin{equation} \label{eq:citymandate}
+\begin{aligned} 
+\text {Log SO2 emission }_{i k t}=& \alpha  (\text { Period }  \times \text{Target}_i \times \text {  Polluting sectors }_{k}) +\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt}  
+\end{aligned}
+\end{equation}
+
+We assume that the environmental regulation was efficient in putting significant pressure on the bureaucrats, especially in TCZ cities. Our assumption is validated: the triple interaction term is negative and strongly significant in TCZ cities (Column 1, Table \ref{tab:table8}), while still negative but insignificant in non-TCZ cities (Column 2, Table \ref{tab:table8}).
+
+\begin{table}[!htb] \centering
+  \caption{The effectiveness of TCZ’s policy-induced incentives to the bureaucrats}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table8}
+    \begin{tabular}{@{\extracolsep{5pt}}lcc}
+      \\[-1.8ex]\hline
+      \hline \\[-1.8ex]
+      & \multicolumn{2}{c}{The Dependent variable: $\text{Ln SO2}_{ikt}$} \\
+      \cline{2-3}
+      \\[-1.8ex] & (1) & (2)\\
+      \\[-1.8ex] & (TCZ) & (No TCZ)\\
+      \hline \\[-1.8ex]
+      $\text{Period} \times target_i \times \text{Polluting}_k$ & $-$0.413$^{***}$ & $-$1.415 \\
+                                                             & (0.141)          & (1.672)  \\
+      \hline \\[-1.8ex]
+      City-year fixed effects                                & Yes              & Yes      \\
+      Industry-year fixed effects                            & Yes              & Yes      \\
+      City-industry fixed effects                            & Yes              & Yes      \\
+      Observations                                           & 23,333           & 7,343    \\
+      R$^{2}$                                                & 0.847            & 0.892    \\
+      \hline
+      \hline \\[-1.8ex]
+      \end{tabular}
+  \end{adjustbox}
+  \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+    \end{tablenotes}
+\end{table}
+
+\subsection{TFP improvement and pollution abatement in SOEs versus private firms: the soft budget constraint at work} \label{sec:tfp}
+
+There is a large body of literature showing that Chinese SOEs report lower economic performances \citep{Zhang2004-ij, Dougherty2007-qu,Qian1996-ab}. Indeed the objective function is not focused on profit maximisation, and the soft budget constraint implies that other emphases are put on competing objectives such as employment, social protection and incumbent protection, taking away from productivity improvement. As pollution decreases alongside productivity improvement, one reason behind the ineffectiveness of the new policy may be the so-called soft budget constraint faced by SOEs \citep{Cole2008-pj}.
+
+The evidence about the correlation between pollution abatement on one hand and productivity (scale economy and innovation) on the other hand is considerable \citep{Andersen2016-pa, Andersen2017-wf, Cole2008-pj}. The rationale is straightforward: innovation aims at producing at a lower cost, allowing companies to use fewer inputs, and less dirty energy per unit of output. By imposing a lower strict limit for the emission of pollutants, the new regulation forces the firms to upgrade or leave the market (rationalisation effect, \cite{Cole2008-pj}). However, this mechanism only works for private firms, whereas SOEs are bailed out. 
+
+To test this assumption, we estimate the following equations:
+
+%https://tex.stackexchange.com/questions/13396/how-to-get-only-one-vertically-centered-equation-number-in-align-environment-wit
+%\begin{equation} \label{eq:tcz1}
+\begin{align} \label{eq:tcz1}
+\text {TFP}_{fikt}=& \alpha (T C Z_{i} \times \text {  Polluting sectors }_{k} \times \text { Period }) +\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt}  \\
+\text {TFP}_{fikt}=& \alpha (SPZ_{i} \times \text {  Polluting sectors }_{k} \times \text { Period }) +\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt}  \\
+\text {TFP}_{fikt}=& \alpha (Coastal_{i} \times \text {  Polluting sectors }_{k} \times \text { Period }) +\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt}  
+\end{align}
+%\end{equation}
+
+Where the dependent variable ${ TFP }_{fikt}$ is the firm's productivity level computed with the Olley–Pakes algorithm \citep{Olley1996-yl} at the city-industry-time-firm level. The right-hand side variables have been defined previously: $TCZ_i$ and $SPZ_i$. We add $Coastal_i$ which is set equal to one in a subset of cities having different tax and industrial policies. $Coastal_i$ is therefore a proxy for the 'Go West' strategy launched in the year 2000 by the government. 
+
+We control for city-time ($\lambda_{it}$), industry-time ($\phi_{kt}$), and finally city-industry $\phi_{ik}$ fixed effects.
+
+\begin{sidewaystable}%[!htb] \centering
+  \caption{Fighting against pollution via productivity improvement: SOEs versus private firms}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table9}
+    \begin{tabular}{@{\extracolsep{5pt}}lcccccccc}
+      \\[-1.8ex]\hline
+      \hline \\[-1.8ex]
+      & \multicolumn{5}{c}{The Dependent variable: $\text{Ln SO2}_{ikt}$} \\
+      \\[-1.8ex] & (SOE) & (PRIVATE) & (SOE) & (PRIVATE) & (SOE) & (PRIVATE) & (SOE) & (PRIVATE)\\
+      \\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\
+      \cline{2-8}
+      $TCZ_c \times \text{Polluting}_i \times \text{Period}$     & 0.506$^{**}$ & 0.536$^{***}$ &               &               &               &               & 0.005         & 0.345$^{***}$ \\
+                                                              & (0.205)      & (0.023)       &               &               &               &               & (0.213)       & (0.111)       \\
+      $SPZ_c \times \text{Polluting}_i \times \text{Period}$     &              &               & 0.070$^{***}$ & 0.147$^{***}$ &               &               & 0.070$^{***}$ & 0.147$^{***}$ \\
+                                                              &              &               & (0.016)       & (0.001)       &               &               & (0.016)       & (0.001)       \\
+      $Coastal_c \times \text{Polluting}_i \times \text{Period}$ &              &               &               &               & 0.513$^{***}$ & 0.382$^{***}$ & 0.510$^{***}$ & 0.191$^{*}$   \\
+                                                              &              &               &               &               & (0.159)       & (0.116)       & (0.171)       & (0.112)       \\
+      \hline \\[-1.8ex]
+      City-year fixed effects                                 & Yes          & Yes           & Yes           & Yes           & Yes           & Yes           & Yes           & Yes           \\
+      Industry-year fixed effects                             & Yes          & Yes           & Yes           & Yes           & Yes           & Yes           & Yes           & Yes           \\
+      City-industry fixed effects                             & Yes          & Yes           & Yes           & Yes           & Yes           & Yes           & Yes           & Yes           \\
+      Observations                                            & 2,415        & 34,437        & 2,415         & 34,437        & 2,415         & 34,437        & 2,415         & 34,437        \\
+      R$^{2}$                                                 & 0.482        & 0.104         & 0.481         & 0.103         & 0.482         & 0.104         & 0.482         & 0.104         \\
+      \hline
+      \hline \\[-1.8ex]
+      \end{tabular}
+  \end{adjustbox}
+  \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+    \end{tablenotes}
+\end{sidewaystable}
+
+The coefficient of interest is $\alpha$. To evidence the soft budget constraint at work, we run equation \ref{eq:tcz1} in two different subsamples: SOEs versus private firms. Because of the soft budget constraint, which allows SOEs to bypass the environmental regulation, non-state firms should respond more vigorously. We, therefore, expect $\alpha$ to be positive for all firms, but lower for SOEs. We subsequently use two proxies for the environmental policies: SPZ and TCZ, and in the last columns, we control for the Go West strategy, which aims at improving firms' productivity and growth potential.
+
+Table \ref{tab:table9} shows the results. Columns 1 and 2 validate our assumption that the new regulation in TCZ cities has increased the average private firms' productivity in the most polluting industries, and, to a lesser extent, the productivity of SOEs. The difference is significant, although small. It becomes larger when the environmental policy is proxied by SPZ with (columns 3–4) and without (columns 5–6) controlling for Coastal, which captures the effect of the Go West policy. Interestingly, SOEs seem to be more efficient in augmenting their TFP than private firms under the Go West strategy, as reflected in both columns 5–6 and 7–8.
+
+\section{Conclusion} \label{sec:conclusion}
+
+The concept of the SBC introduced by Kornai \citeyear{Kornai1993-kg} is a very fruitful concept that can be applied to a wide range of situations, beyond simple transition economics and economics of socialism. Vahabi \citeyear{Vahabi2001-bp, Vahabi2014-qy} summarizes these situations, which include many cases of soft budget constraints in market economies. This paper investigates one such situation, namely the case of SOEs, which do not restructure in reaction to the introduction of a new set of stringent environmental regulations. 
+
+The empirical analysis is rooted in a unique and rich dataset provided by the Ministry of Environmental Protection (MEP) and by the State Environmental Protection Agency (SEPA), which collect the main data source of pollutants and wastes in China since 1980. The triple difference in difference identification strategy allows us to quantify the effect of environmental regulation on firms' emissions of pollution. We distinguish private firms and SOEs, and we find that the environmental policy's effect is smaller by 42\% for the latter. Chinese SOEs do not restructure because the environmentally induced budget constraint hardening does not constrain them and, yet, they nevertheless benefit from the SBC. 
+
+\singlespacing
+\setlength\bibsep{0pt}
+%\nocite{*}
+%\pagebreak
+
+\clearpage
+
+%\bibliographystyle{plainnat}
+\bibliography{Bibliography/SBC_bibliography.bib}
+%\printbibliography
+
+%\clearpage
+
+\section*{Appendix} \label{sec:appendixa}
+\addcontentsline{toc}{section}{Appendix A}
+
+\begin{table}[!htbp] \centering
+  \caption{TCZ and SPZ cities in China}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:appendix1}
+\begin{tabular}{llllllllll}
+\hline
+Province  & City      & Code & TCZ & SPZ & Province     & City          & Code & TCZ & SPZ \\
+\hline
+Anhui     & Hefei     & 3401 & 0   & 0   & Guangdong    & Shanwei       & 4415 & 1   & 1   \\
+Anhui     & Wuhu      & 3402 & 1   & 0   & Guangdong    & Heyuan        & 4416 & 0   & 1   \\
+Anhui     & Bengbu    & 3403 & 0   & 0   & Guangdong    & Yangjiang     & 4417 & 0   & 1   \\
+Anhui     & Huainan   & 3404 & 0   & 0   & Guangdong    & Qingyuan      & 4418 & 1   & 1   \\
+Anhui     & Maanshan  & 3405 & 1   & 0   & Guangdong    & Dongguan      & 4419 & 1   & 1   \\
+Anhui     & Huaibei   & 3406 & 0   & 0   & Guangdong    & Zhongshan     & 4420 & 1   & 1   \\
+Anhui     & Tongling  & 3407 & 1   & 0   & Guangdong    & Chaozhou      & 4421 & 1   & 1   \\
+Anhui     & Anqing    & 3408 & 0   & 0   & Guangdong    & Jieyang       & 4424 & 1   & 1   \\
+Anhui     & Huangshan & 3409 & 1   & 0   & Guangxi      & Nanning       & 4501 & 1   & 1   \\
+Anhui     & Fuyang    & 3412 & 0   & 0   & Guangxi      & Liuzhou       & 4502 & 1   & 1   \\
+Anhui     & Liuan     & 3415 & 0   & 0   & Guangxi      & Guilin        & 4503 & 1   & 1   \\
+Anhui     & Xuancheng & 3418 & 1   & 0   & Guangxi      & Wuzhou        & 4504 & 1   & 1   \\
+Anhui     & Chizhou   & 3417 & 0   & 0   & Guangxi      & Beihai        & 4505 & 0   & 1   \\
+Beijing   & Beijing   & 1101 & 1   & 1   & Guangxi      & Yulin         & 4506 & 1   & 1   \\
+Chongqing & Chongqing & 5001 & 1   & 1   & Guangxi      & Baise         & 4510 & 0   & 1   \\
+Fujian    & Fuzhou    & 3501 & 1   & 1   & Guangxi      & Hechi         & 4508 & 1   & 1   \\
+Fujian    & Xiamen    & 3502 & 1   & 1   & Guangxi      & Qinzhou       & 4509 & 0   & 1   \\
+Fujian    & Putian    & 3503 & 0   & 1   & Guangxi      & Fangchenggang & 4512 & 0   & 1   \\
+Fujian    & Sanming   & 3504 & 1   & 1   & Guangxi      & Guigang       & 4513 & 1   & 1   \\
+Fujian    & Quanzhou  & 3505 & 1   & 1   & Guangxi      & Hezhou        & 4516 & 1   & 1   \\
+Fujian    & Zhangzhou & 3506 & 1   & 1   & Guizhou      & Guiyang       & 5201 & 1   & 1   \\
+Fujian    & Nanping   & 3507 & 0   & 1   & Guizhou      & Liupanshui    & 5202 & 0   & 1   \\
+Fujian    & Ningde    & 3508 & 0   & 1   & Guizhou      & Zunyi         & 5203 & 1   & 1   \\
+Fujian    & Longyan   & 3509 & 1   & 1   & Guizhou      & Anshun        & 5207 & 1   & 1   \\
+Gansu     & Lanzhou   & 6201 & 1   & 1   & Hainan       & Haikou        & 4601 & 0   & 0   \\
+Gansu     & Jiayuguan & 6202 & 0   & 1   & Hebei        & Shijiazhuang  & 1301 & 1   & 1   \\
+Gansu     & Jinchang  & 6203 & 1   & 1   & Hebei        & Tangshan      & 1302 & 1   & 1   \\
+Gansu     & Baiyin    & 6204 & 1   & 1   & Hebei        & Qinhuangdao   & 1303 & 0   & 1   \\
+Gansu     & Tianshui  & 6205 & 0   & 1   & Hebei        & Handan        & 1304 & 1   & 1   \\
+Gansu     & Jiuquan   & 6206 & 0   & 1   & Hebei        & Xingtai       & 1305 & 1   & 1   \\
+Gansu     & Zhangye   & 6207 & 1   & 1   & Hebei        & Baoding       & 1306 & 1   & 1   \\
+Gansu     & Wuwei     & 6208 & 0   & 1   & Hebei        & Zhangjiakou   & 1307 & 1   & 1   \\
+Gansu     & Dingxin   & 6209 & 0   & 1   & Hebei        & Chengde       & 1308 & 1   & 1   \\
+Gansu     & Longnann  & 6210 & 0   & 1   & Hebei        & Cangzhou      & 1309 & 0   & 1   \\
+Gansu     & Pingliang & 6211 & 0   & 1   & Hebei        & Langfang      & 1310 & 0   & 1   \\
+Gansu     & Qingyangn & 6212 & 0   & 1   & Hebei        & Hengshui      & 1311 & 1   & 1   \\
+Guangdong & Guangzhou & 4401 & 1   & 1   & Heilongjiang & Harbin        & 2301 & 0   & 0   \\
+Guangdong & Shaoguan  & 4402 & 1   & 1   & Heilongjiang & Qiqihar       & 2302 & 0   & 0   \\
+Guangdong & Shenzhen  & 4403 & 1   & 1   & Heilongjiang & Jixi          & 2303 & 0   & 0   \\
+Guangdong & Zhuhai    & 4404 & 1   & 1   & Heilongjiang & Hegang        & 2304 & 0   & 0   \\
+Guangdong & Shantou   & 4405 & 1   & 1   & Heilongjiang & Shuangyashan  & 2305 & 0   & 0   \\
+Guangdong & Foshan    & 4406 & 1   & 1   & Heilongjiang & Daqing        & 2306 & 0   & 0   \\
+Guangdong & Jiangmen  & 4407 & 1   & 1   & Heilongjiang & Yichun        & 2307 & 0   & 0   \\
+Guangdong & Zhanjiang & 4408 & 1   & 1   & Heilongjiang & Jiamusi       & 2308 & 0   & 0   \\
+Guangdong & Maoming   & 4409 & 0   & 1   & Heilongjiang & Qitaihe       & 2309 & 0   & 0   \\
+Guangdong & Zhaoqing  & 4412 & 1   & 1   & Heilongjiang & Mudanjiang    & 2310 & 0   & 0   \\
+Guangdong & Huizhou   & 4413 & 1   & 1   & Heilongjiang & Heihe         & 2311 & 0   & 0   \\
+Guangdong & Meizhou   & 4414 & 0   & 1   & Heilongjiang & Suihua        & 2314 & 0   & 0  
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[!htbp] \centering
+  \caption{TCZ and SPZ cities in China (continued)}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:appendix2}
+\begin{tabular}{llllllllll}
+\hline
+Province       & City         & geocode4\_corr & TCZ & SPZ & Province & City        & geocode4\_corr & TCZ & SPZ \\
+\hline
+Henan          & Zhengzhou    & 4101           & 1   & 1   & Jiangsu  & Xuzhou      & 3203           & 1   & 1   \\
+Henan          & Kaifeng      & 4102           & 0   & 1   & Jiangsu  & Changzhou   & 3204           & 1   & 1   \\
+Henan          & Luoyang      & 4103           & 1   & 1   & Jiangsu  & Suzhou      & 3205           & 1   & 1   \\
+Henan          & Pingdingshan & 4104           & 0   & 1   & Jiangsu  & Nantong     & 3206           & 1   & 1   \\
+Henan          & Anyang       & 4105           & 1   & 1   & Jiangsu  & Lianyungang & 3207           & 0   & 1   \\
+Henan          & Hebi         & 4106           & 0   & 1   & Jiangsu  & Yancheng    & 3209           & 0   & 1   \\
+Henan          & Xinxiang     & 4107           & 0   & 1   & Jiangsu  & Yangzhou    & 3210           & 1   & 1   \\
+Henan          & Jiaozuo      & 4108           & 1   & 1   & Jiangsu  & Zhenjiang   & 3211           & 1   & 1   \\
+Henan          & Puyang       & 4109           & 0   & 1   & Jiangsu  & Taizhou     & 3212           & 1   & 1   \\
+Henan          & Xuchang      & 4110           & 0   & 1   & Jiangsu  & Suqian      & 3217           & 0   & 1   \\
+Henan          & Luohe        & 4111           & 0   & 1   & Jiangsu  & Huaian      & 3221           & 0   & 1   \\
+Henan          & Sanmenxia    & 4112           & 1   & 1   & Jiangxi  & Nanchang    & 3601           & 1   & 1   \\
+Henan          & Shangqiu     & 4113           & 0   & 1   & Jiangxi  & Jingdezhen  & 3602           & 0   & 1   \\
+Henan          & Zhoukou      & 4114           & 0   & 1   & Jiangxi  & Pingxiang   & 3603           & 1   & 1   \\
+Henan          & Zhumadian    & 4115           & 0   & 1   & Jiangxi  & Jiujiang    & 3604           & 1   & 1   \\
+Henan          & Nanyang      & 4116           & 0   & 1   & Jiangxi  & Xinyu       & 3605           & 0   & 1   \\
+Henan          & Xinyangn     & 4117           & 0   & 1   & Jiangxi  & Yingtan     & 3606           & 1   & 1   \\
+Hubei          & Wuhan        & 4201           & 1   & 1   & Jiangxi  & Ganzhoun    & 3607           & 1   & 1   \\
+Hubei          & Huangshi     & 4202           & 1   & 1   & Jiangxi  & Yichun      & 3608           & 0   & 1   \\
+Hubei          & Shiyan       & 4203           & 0   & 1   & Jiangxi  & Shangrao    & 3609           & 0   & 1   \\
+Hubei          & Yichang      & 4205           & 1   & 1   & Jiangxi  & Jian        & 3610           & 1   & 1   \\
+Hubei          & Xiangfan     & 4206           & 0   & 1   & Jiangxi  & Fuzhou      & 3611           & 1   & 1   \\
+Hubei          & Ezhou        & 4207           & 1   & 1   & Jilin    & Changchun   & 2201           & 0   & 0   \\
+Hubei          & Jingmen      & 4208           & 1   & 1   & Jilin    & Jilin       & 2202           & 1   & 0   \\
+Hubei          & Huanggang    & 4209           & 0   & 1   & Jilin    & Siping      & 2203           & 1   & 0   \\
+Hubei          & Xiaogan      & 4210           & 0   & 1   & Jilin    & Liaoyuan    & 2204           & 0   & 0   \\
+Hubei          & Xianning     & 4211           & 1   & 1   & Jilin    & Tonghua     & 2205           & 1   & 0   \\
+Hubei          & Jingzhou     & 4212           & 1   & 1   & Jilin    & Baicheng    & 2209           & 0   & 0   \\
+Hubei          & Suizhou      & 4215           & 0   & 1   & Liaoning & Shenyang    & 2101           & 1   & 1   \\
+Hunan          & Changsha     & 4301           & 1   & 1   & Liaoning & Dalian      & 2102           & 1   & 1   \\
+Hunan          & Zhuzhou      & 4302           & 1   & 1   & Liaoning & Anshan      & 2103           & 1   & 1   \\
+Hunan          & Xiangtan     & 4303           & 1   & 1   & Liaoning & Fushun      & 2104           & 1   & 1   \\
+Hunan          & Hengyang     & 4304           & 1   & 1   & Liaoning & Benxi       & 2105           & 1   & 1   \\
+Hunan          & Shaoyang     & 4305           & 0   & 1   & Liaoning & Dandong     & 2106           & 0   & 1   \\
+Hunan          & Yueyang      & 4306           & 1   & 1   & Liaoning & Jinzhou     & 2107           & 1   & 1   \\
+Hunan          & Changde      & 4307           & 1   & 1   & Liaoning & Yingkou     & 2108           & 0   & 1   \\
+Hunan          & Yiyang       & 4309           & 1   & 1   & Liaoning & Fuxin       & 2109           & 1   & 1   \\
+Hunan          & Loudin       & 4310           & 1   & 1   & Liaoning & Liaoyang    & 2110           & 1   & 1   \\
+Hunan          & Chenzhou     & 4311           & 1   & 1   & Liaoning & Panjin      & 2111           & 0   & 1   \\
+Hunan          & Huaihua      & 4312           & 1   & 1   & Liaoning & Tieling     & 2112           & 0   & 1   \\
+Inner Mongolia & Hohhot       & 1501           & 1   & 1   & Liaoning & Chaoyang    & 2113           & 0   & 1   \\
+Inner Mongolia & Baotou       & 1502           & 1   & 1   & Ningxia  & Yinchuan    & 6401           & 1   & 1   \\
+Inner Mongolia & Wuhai        & 1503           & 1   & 1   & Ningxia  & Shizuishan  & 6402           & 1   & 1   \\
+Inner Mongolia & Chifeng      & 1504           & 1   & 1   & Ningxia  & Guyuann     & 6404           & 0   & 1   \\
+Inner Mongolia & Hulunbeirn   & 1507           & 0   & 1   & Qinghai  & Xining      & 6301           & 0   & 0   \\
+Inner Mongolia & Ulanqabn     & 1510           & 0   & 1   & Shaanxi  & Xian        & 6101           & 1   & 1   \\
+Inner Mongolia & Bayannaoern  & 1511           & 0   & 1   & Shaanxi  & Tongchuan   & 6102           & 1   & 1   \\
+Jiangsu        & Nanjing      & 3201           & 1   & 1   & Shaanxi  & Baoji       & 6103           & 0   & 1   \\
+Jiangsu        & Wuxi         & 3202           & 1   & 1   & Shaanxi  & Xianyang    & 6104           & 0   & 1  
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[!htbp] \centering
+  \caption{TCZ and SPZ cities in China (continued)}
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:appendix3}
+\begin{tabular}{llllllllll}
+\hline
+Province       & City         & geocode4\_corr & TCZ & SPZ & Province & City        & geocode4\_corr & TCZ & SPZ \\
+\hline
+Shaanxi  & Weinan    & 6105           & 1   & 1   & Xinjiang & Karamay  & 6502           & 0   & 1   \\
+Shaanxi  & Hanzhong  & 6106           & 0   & 1   & Yunnan   & Kunming  & 5301           & 1   & 1   \\
+Shaanxi  & Ankang    & 6107           & 0   & 1   & Yunnan   & Zhaotong & 5306           & 1   & 1   \\
+Shaanxi  & Shangluon & 6108           & 1   & 1   & Yunnan   & Qujing   & 5303           & 1   & 1   \\
+Shaanxi  & Yanan     & 6109           & 0   & 1   & Yunnan   & Simaon   & 5309           & 0   & 1   \\
+Shaanxi  & Yulinn    & 6110           & 0   & 1   & Yunnan   & Baoshan  & 5312           & 0   & 1   \\
+Shandong & Jinan     & 3701           & 1   & 1   & Yunnan   & Lijiangn & 5314           & 0   & 1   \\
+Shandong & Qingdao   & 3702           & 1   & 1   & Yunnan   & Lincangn & 5317           & 0   & 1   \\
+Shandong & Zibo      & 3703           & 1   & 1   & Zhejiang & Hangzhou & 3301           & 1   & 1   \\
+Shandong & Zaozhuang & 3704           & 1   & 1   & Zhejiang & Ningbo   & 3302           & 1   & 1   \\
+Shandong & Dongying  & 3705           & 0   & 1   & Zhejiang & Wenzhou  & 3303           & 1   & 1   \\
+Shandong & Yantai    & 3706           & 1   & 1   & Zhejiang & Jiaxing  & 3304           & 1   & 1   \\
+Shandong & Weifang   & 3707           & 1   & 1   & Zhejiang & Huzhou   & 3305           & 1   & 1   \\
+Shandong & Jining    & 3708           & 1   & 1   & Zhejiang & Shaoxing & 3306           & 1   & 1   \\
+Shandong & Taian     & 3709           & 1   & 1   & Zhejiang & Jinhua   & 3307           & 1   & 1   \\
+Shandong & Weihai    & 3710           & 0   & 1   & Zhejiang & Quzhou   & 3308           & 1   & 1   \\
+Shandong & Rizhao    & 3711           & 0   & 1   & Zhejiang & Zhoushan & 3309           & 0   & 1   \\
+Shandong & Liaocheng & 3714           & 0   & 1   & Zhejiang & Lishui   & 3310           & 0   & 1   \\
+Shandong & Linyi     & 3713           & 0   & 1   & Zhejiang & Taizhou  & 3311           & 1   & 1   \\
+Shandong & Heze      & 3717           & 0   & 1   &          &          &                &     &     \\
+Shandong & Laiwu     & 3720           & 1   & 1   &          &          &                &     &     \\
+Shanghai & Shanghai  & 3101           & 1   & 1   &          &          &                &     &     \\
+Shanxi   & Taiyuan   & 1401           & 1   & 1   &          &          &                &     &     \\
+Shanxi   & Datong    & 1402           & 1   & 1   &          &          &                &     &     \\
+Shanxi   & Yangquan  & 1403           & 1   & 1   &          &          &                &     &     \\
+Shanxi   & Changzhi  & 1404           & 0   & 1   &          &          &                &     &     \\
+Shanxi   & Jincheng  & 1405           & 0   & 1   &          &          &                &     &     \\
+Shanxi   & Shuozhou  & 1406           & 1   & 1   &          &          &                &     &     \\
+Shanxi   & Xinzhou   & 1408           & 1   & 1   &          &          &                &     &     \\
+Shanxi   & Luliangn  & 1409           & 0   & 1   &          &          &                &     &     \\
+Shanxi   & Jinzhong  & 1417           & 1   & 1   &          &          &                &     &     \\
+Shanxi   & Linfen    & 1410           & 1   & 1   &          &          &                &     &     \\
+Shanxi   & Yuncheng  & 1412           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Chengdu   & 5101           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Zigong    & 5103           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Panzhihua & 5104           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Luzhou    & 5105           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Deyang    & 5106           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Mianyang  & 5107           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Guangyuan & 5108           & 0   & 1   &          &          &                &     &     \\
+Sichuan  & Suining   & 5109           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Neijiang  & 5110           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Leshan    & 5111           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Yibin     & 5114           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Nanchong  & 5113           & 1   & 1   &          &          &                &     &     \\
+Sichuan  & Yaan      & 5118           & 0   & 1   &          &          &                &     &     \\
+Sichuan  & Guangan   & 5122           & 1   & 1   &          &          &                &     &     \\
+Tianjin  & Tianjin   & 1201           & 1   & 1   &          &          &                &     &     \\
+Xinjiang & Urumqi    & 6501           & 1   & 1   &          &          &                &     &    
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[hbt]\centering
+\resizebox{\textwidth}{!}{
+\begin{threeparttable}   
+\caption{\small SO2 Industry share, 2005}
+\begin{tabular}{l*{2}{c}}
+\toprule
+& \multicolumn{2}{c}{} \\ 
+\hline
+\\[-1.8ex] & CIC & Value \\ 
+\midrule
+Non-metallic Mineral Products &	31&	0.2340\\ 
+Smelting and Pressing of Ferrous Metals	&32	&0.1983\\ 
+Raw Chemical Materials and Chemical Products&	26	&0.1611\\ 
+Processing of Petroleum, Coking, Processing of Nuclear Fuel	&25	&0.0910\\ 
+Smelting and Pressing of Non-ferrous Metals	&33&	0.0855\\ 
+Paper and Paper Products&	22&	0.0577\\ 
+Textile	&17	&0.0407\\ 
+Chemical Fibers&	28	&0.0222\\ 
+Processing of Food from Agricultural Products&	13	&0.0199\\ 
+Beverages&	15	&0.0130\\ 
+Foods	&14	&0.0123\\ 
+Medicines&	27	&0.0089\\ 
+General Purpose Machinery	&35&	0.0089\\ 
+Processing of Timber, Manufacture of Wood,Bamboo, Rattan, Palm, and Straw Products	&20	&0.0065\\ 
+Rubber	&29&	0.0063\\ 
+Transport Equipment&	37&	0.0061\\ 
+Special Purpose Machinery&	36&	0.0050\\ 
+Electrical Machinery and Equipment&	39&	0.0038\\ 
+Metal Products&	34	&0.0037\\ 
+Leather, Fur, Feather and Related Products	&19	&0.0029\\ 
+Communication Equipment, Computers and Other Electronic Equipment&	40&	0.0025\\ 
+Textile Wearing Apparel, Footwear, and Caps	&18&	0.0022\\ 
+Measuring Instruments and Machinery for Cultural Activity and Office Work	&41&	0.0020\\ 
+Plastics&	30&	0.0018 \\ 
+Tobacco&	16&	0.0016\\ 
+Artwork and Other Manufacturing&	42	&0.0007\\ 
+Furniture&	21&	0.0006\\ 
+Articles For Culture, Education and Sport Activity&	24&	0.0004\\ 
+Printing, Reproduction of Recording Media&	23&	0.0004\\ 
+
+\hline
+\end{tabular}
+\begin{tablenotes}
+      \small
+      \item The share is computed for 28 industries. \\
+      Source: MEP dataset. Author's own computation 
+    \end{tablenotes}
+    \label{tab:so2share}
+\end{threeparttable}}
+\end{table}
+
+\end{document}
