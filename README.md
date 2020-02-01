@@ -6,6 +6,12 @@ This paper analyses the efficiency of a set of environmental measures introduced
 
 The full paper in PDF format can be downloaded from here: [Link](https://github.com/thomaspernet/Paper_SBC/raw/master/SBC.pdf)
 
+Authors:
+
+- Mathilde Maurel: CNRS, France and Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France
+- Thomas Pernet: Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France,
+  - If you have any question, you can contact me using my email adress: [t.pernetcoudrier@gmail.com](t.pernetcoudrier@gmail.com)
+
 The project's codes and documentions are available:
 
 - Data preprocessing main dataset
