@@ -10,7 +10,7 @@ Authors:
 
 - Mathilde Maurel: CNRS, France and Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France
 - Thomas Pernet: Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France,
-  - If you have any question, you can contact me using my email adress: [t.pernetcoudrier@gmail.com](t.pernetcoudrier@gmail.com)
+  - If you have any question, you can contact me using my email adress: [t.pernetcoudrier@gmail.com](mailto:t.pernetcoudrier@gmail.com)
 
 The project's codes and documentions are available:
 
