@@ -115,7 +115,7 @@ The first evaluations of the policy were run in 2000, as reported in  Table \ref
 The poor results of the environmental policy were attributed to the design of the policy itself. Its main flaw was that the objectives set at the national level were not restrictive enough at the local level. As a result economic growth was strongly emphasised by the central government, which did not provide local municipalities with the incentives to enforce not only economic growth, but also control over pollution. Most of the time, those objectives turned out to be contradictory and could not be achieved contemporaneously \citep{Barbier2019-ce, Brajer2011-wc, Grossman1995-fb, Lee2015-pw}.
 
 \begin{table}[!htbp] \centering
-  \caption{SO2 reduction during the subsequent FYP}
+  \caption{SO2 reduction during the subsequent FYPs}
   \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
     \label{tab:table1}
     \begin{tabular}{lrrrr}
@@ -198,7 +198,7 @@ For $\text{share SOE}_k$, we rely on three proxies. The first is SOEs industrial
 In 1998, the State Council launched a vast policy to curb SO2 emissions and to reduce the acid rain. There were 175 cities called TCZ cities located in 27 provinces designated to provide the subsequent effort for controlling SO2 emissions. Out of the 228 cities in our dataset, 140 are qualified as TCZ cities. Table \ref{tab:appendix1} in the appendix provides the list of TCZ cities present in our dataset. $T C Z_{i}$ is a dummy set equal to one if city $i$ belongs to this list. 
 
 \begin{table}[!htbp] \centering
-    \caption{ Summary Statistics by city-industry and city characteristics}
+    \caption{ Summary statistics by city-industry and city characteristics}
       \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
     \label{tab:table2}
     \begin{tabular}{lrrrr}
@@ -332,14 +332,14 @@ We must check that our strategy satisfies the parallel trends assumption, by sho
 
 \begin{equation} \label{eq:paralleltrend}
 \begin{aligned} 
-\text {Log SO2 emission }_{i k t}=\sum_{t=2002}^{2007} \alpha (T C Z_{i}  \times \text {  Polluting sectors }_{k} \times year _{t}) + \\ 
-\theta {X}_{i k t}+\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt} 
+\text {Log SO2 emission }_{i k t}=\sum_{t=2002}^{2007} \alpha (T C Z_{i}  \times \text {  Polluting sectors }_{k} \times year _{t})  \\ 
++ \theta {X}_{i k t}+\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt} 
 \end{aligned}
 \end{equation}
 In which $year_t$ is a dummy set equal to one with $t$ ranging from the year 2002 to 2007. 
 
 \begin{table}[!htb] \centering
-  \caption{Parallel trend}
+  \caption{Parallel trends}
   \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
     \label{tab:table4}
     \begin{tabular}{@{\extracolsep{5pt}}lccc}
@@ -528,7 +528,7 @@ Panel A in Table \ref{tab:table7} validates our assumption – SOEs are not affe
         R$^{2}$                                             & 0.865           & 0.869           & 0.862           \\
         \bottomrule
         \\ %%% Create second table
-        \multicolumn{1}{l}{\textbf{Panel B: Prviate Dominating sectors}} \\
+        \multicolumn{1}{l}{\textbf{Panel B: Private Dominating sectors}} \\
         \toprule
         & \multicolumn{3}{c}{The Dependent variable: $Ln SO2_{ikt}$} \\
         \cline{2-4}
@@ -580,7 +580,7 @@ To estimate the impact of the new administrative regulations on the logarithm of
 
 \begin{equation} \label{eq:citymandate}
 \begin{aligned} 
-\text {Log SO2 emission }_{i k t}=& \alpha  (\text { Period }  \times \text{Target}_i \times \text {  Polluting sectors }_{k}) +\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt}  
+\text {Log SO2 emission }_{i k t}=& \alpha  (\text { Period }  \times \text{Target}_i \times \text {  Polluting sectors }_{k}) \\ + \nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt}  
 \end{aligned}
 \end{equation}
 
