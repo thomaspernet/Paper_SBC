@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,
+ulem,graphicx,color,setspace,sectsty,comment,footmisc,
+natbib,
+pdflscape,subfigure,array,hyperref, booktabs,
+threeparttable, siunitx, adjustbox,
+rotating}
+
+%https://www.stefaanlippens.net/latex-trick-customizing-captions.html
+\usepackage[font=sf, labelfont={sf,bf}, margin=1cm, justification=raggedright,singlelinecheck=false]{caption}
+
+\usepackage[utf8]{inputenc}
+
+%Change spacing between section
+\usepackage{titlesec}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\graphicspath{{Paper/images/}}
+
+%https://www.overleaf.com/learn/latex/Natbib_citation_styles
+%https://www.overleaf.com/learn/latex/Bibtex%20bibliography%20styles#Natbib_styles
+%
+%\usepackage[authordate, natbib,backend=biber]{biblatex-chicago}
+%\bibliography{Bibliography/SBC_bibliography.bib}
+%https://gking.harvard.edu/files/natnotes2.pdf
+\bibliographystyle{chicago}
+
+
+%%Resize figure and make sure not one page
+% https://www.overleaf.com/learn/latex/Questions/How_can_I_get_my_table_or_figure_to_stay_where_they_are,_instead_of_going_to_the_next_page%3F
+
+\normalem
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+%https://tex.stackexchange.com/questions/410173/package-inputenc-error-unicode-char-u2212-error?noredirect=1&lq=1
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\begin{titlepage}
+
+
+\title{New Evidence on the Soft Budget Constraint: Chinese Environmental Policy Effectiveness in Private versus SOEs}
+\author{
+Mathilde Maurel\thanks{CNRS, France and Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France} 
+\and Thomas Pernet\thanks{Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France,
+\href{mailto:t.pernetcoudrier@gmail.com}{email: t.pernetcoudrier@gmail.com} 
+%email: \href{t.pernetcoudrier@gmail.com}
+}
+}
+
+
+\date{}
+
+\maketitle
+\begin{abstract}
+\noindent This paper analyses the efficiency of a set of environmental measures introduced by the 11th FYP (Five Years Plan) in China in 2006, using a rich and unique dataset borrowed from the Ministry of Environmental Protection (MEP) and from the State Environmental Protection Agency (SEPA). The objective is to provide new evidence of the Soft Budget Constraint (SBC), which is a key concept coined by Janos Kornai. The main finding is that TCZ (Two Control Zone) cities are successful in bringing down the emission of SO2, and more importantly that this success is driven by the private sector. Sectors dominated by State-Owned Enterprises (SOEs) are less sensitive to the environmental target-based evaluation system, by a factor of 42\%. We also find that one channel, through which this adjustment takes place, is Total Factor Productivity (TFP), but not in the case of SOEs. We interpret these results as pointing to the evidence of a still ongoing SBC surrounding Chinese SOEs.  
+\vspace{0em}\\
+\noindent\textbf{Keywords:} Environmental regulation, China, Kornai, Soft Budget Constraint\\
+\vspace{0em}\\
+\noindent\textbf{JEL Codes:} Q53,Q56,P2,R11
+\\
+
+\bigskip
+\end{abstract}
+\setcounter{page}{0}
+\thispagestyle{empty}
+\end{titlepage}
+
+\end{document}
