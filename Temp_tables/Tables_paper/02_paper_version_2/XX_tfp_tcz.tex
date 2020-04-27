@@ -1,0 +1,46 @@
+
+\documentclass[preview]{standalone} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time \times Fri, Apr 24, 2020 - 16:37:52
+\begin{table}[!htbp] \centering 
+  \caption{Reduction mandate and TFP x TCZ versus non-TCZ} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{Dependent variable \text { TFP }_{fikt}} \\ 
+\cline{2-5}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{SOE}&\multicolumn{2}{c}{PRIVATE}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\
+ \\[-1.8ex]& TCZ & NO TCZ & TCZ & NO TCZ\\
+ \hline \\[-1.8ex] 
+   target_c \times \text{Period} \times \text{Polluted}_i  & 0.144$^{***}$ & $-$0.419 & $-$0.022 & $-$0.421$^{**}$ \\ 
+  & (0.050) & (0.429) & (0.021) & (0.188) \\ 
+ \hline \\[-1.8ex] 
+Firm & Yes & Yes & Yes & Yes \\ 
+City-industry & No & No & Yes & Yes \\ 
+City-time & Yes & Yes & Yes & Yes \\ 
+time-industry & No & No & Yes & Yes \\ 
+Observations & 32,078 & 9,410 & 517,652 & 89,657 \\ 
+R$^{2}$ & 0.953 & 0.961 & 0.861 & 0.869 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \\
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+\end{tablenotes}
+\end{table}
+
+\end{document}

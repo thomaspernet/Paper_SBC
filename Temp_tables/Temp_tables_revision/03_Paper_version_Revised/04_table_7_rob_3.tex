@@ -1,0 +1,59 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time: Sat, Apr 04, 2020 - 11:27:39
+\begin{table}[!htbp] \centering 
+  \caption{Presence of Foreign firms} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{Dependent variable: \text { SO2 emission }_{i k t}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\
+ \\[-1.8ex]& Output & Capital & Labour & Output & Capital & Labour\\
+ \hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.101 & $-$0.101 & $-$0.051 & 0.078 & 0.123 & 0.044 \\ 
+  & (0.169) & (0.164) & (0.156) & (0.211) & (0.203) & (0.180) \\ 
+   TCZ_c \times \text{Period} \times \text{output share Foreign}_{i} & $-$0.387 &  &  & 0.937 &  &  \\ 
+  & (0.662) &  &  & (0.919) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{output share Foreign}_{i} & $-$0.299 &  &  & $-$1.448 &  &  \\ 
+  & (1.019) &  &  & (1.237) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{capital share Foreign}_{i}  &  & $-$0.291 &  &  & 0.984 &  \\ 
+  &  & (0.620) &  &  & (0.781) &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{capital share Foreign}_{i}  &  & $-$0.249 &  &  & $-$1.710 &  \\ 
+  &  & (0.942) &  &  & (1.109) &  \\ 
+   TCZ_c \times \text{Period} \times \text{labour share Foreign}_{i}  &  &  & 0.004 &  &  & 1.203 \\ 
+  &  &  & (0.599) &  &  & (0.757) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{labour share Foreign}_{i}  &  &  & $-$0.798 &  &  & $-$1.172 \\ 
+  &  &  & (1.162) &  &  & (1.167) \\ 
+ \hline \\[-1.8ex] 
+City fixed effects & Yes & Yes & Yes & No & No & No \\ 
+Industry fixed effects & Yes & Yes & Yes & No & No & No \\ 
+Yes fixed effects & Yes & Yes & Yes & No & No & No \\ 
+City-year fixed effects & No & No & No & Yes & Yes & Yes \\ 
+Industry-year fixed effects & No & No & No & Yes & Yes & Yes \\ 
+City-industry fixed effects & No & No & No & Yes & Yes & Yes \\ 
+Observations & 30,676 & 30,676 & 30,676 & 30,676 & 30,676 & 30,676 \\ 
+R$^{2}$ & 0.346 & 0.346 & 0.346 & 0.851 & 0.851 & 0.851 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+for the regressions with city,industry, year fixed effect (i.e. columns 1-3).
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+
+\end{document}

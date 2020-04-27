@@ -1,0 +1,51 @@
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}
+
+\begin{table}[!htbp] \centering
+    \caption{Summary statistics by city characteristics}
+      \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table2}
+    \begin{tabular}{lrr}
+      \multicolumn{1}{l}{\textbf{\small Panel A: City/city-industry}} \\
+      \toprule
+      & \multicolumn{1}{c}{No TCZ} & \multicolumn{1}{c}{TCZ} \\
+      \midrule
+      $SO2_{ikt}$  & 182,873 & 172,032 \\
+      $\text{SO2 over population}_{ikt}$ &   2,754 &   1,633 \\
+      $\text{gdp per capita}_i$ &  19,796 &  32,796 \\
+      $\text{population}_i$ &      99 &     266 \\
+      \bottomrule
+      \\ %%% Create second table
+      \multicolumn{1}{l}{\textbf{\small Panel B: SO2 pollution reduction}} \\
+      \toprule
+      {} & \multicolumn{2}{l}{\footnotesize difference (10.000 tons units)} \\
+                  & No TCZ   & TCZ     \\
+      Location    &          &         \\
+      \midrule
+      Full sample &    -192 & -436  \\
+      Central     &    -238 & -232 \\
+      Coastal     &    -138 & -659  \\
+      Northeast   &    -206 &  -89 \\
+      Northwest   &    -115 & -277  \\
+      Southwest   &    -272 & -503 \\
+      Non Coastal &    -215 & -302  \\
+      Coastal     &    -140 & -578  \\
+      \bottomrule
+      \hline
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      Sources: Author's own computation \\
+      Panel A provides summary statistics for the main variables used in the subsequent empirical analysis. \\
+  Panel B provides summary statistics for the SO2 emission (in 10.000 tons) for Chinese cities (228), split into TCZ (140) and non-TCZ (88) cities \\
+  $SO2_{ikt}$ is in kilos and $\text{population}_i$ in million
+      \\
+    \end{tablenotes}
+\end{table}
+
+\end{document}

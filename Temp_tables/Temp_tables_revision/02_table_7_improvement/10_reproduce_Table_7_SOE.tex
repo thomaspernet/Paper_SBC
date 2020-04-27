@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}
+
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Thu, Mar 26, 2020 - 10:20:27
+\begin{table}[!htbp] \centering 
+  \caption{SOE dominating sectors} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{The Dependent variable:} \\ 
+\cline{2-4} 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+  output_{cit} & 0.0002 & 0.129 & 0.159 \\ 
+  & (0.247) & (0.274) & (0.255) \\ 
+  capital_{cit} & 0.262 & 0.123 & $-$0.026 \\ 
+  & (0.523) & (0.507) & (0.485) \\ 
+  labour_{cit} & 2.384 & 2.378 & 2.568 \\ 
+  & (1.950) & (1.819) & (1.749) \\ 
+   TCZ_c \times \text{Polluted}_i \times \text{Period}  & 0.101 & 0.114 & 0.235 \\ 
+  & (0.234) & (0.229) & (0.232) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes \\ 
+Observations & 9,824 & 10,423 & 10,076 \\ 
+R$^{2}$ & 0.865 & 0.869 & 0.862 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{3}{l}{Heteroskedasticity-robust standard errors in parentheses} \\ 
+ & \multicolumn{3}{l}{are clustered by city} \\ 
+\end{tabular}
+\end{adjustbox}
+\end{table} 
+
+
+\end{document}

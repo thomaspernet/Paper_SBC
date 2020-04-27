@@ -1,0 +1,36 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time: Fri, Mar 27, 2020 - 09:43:16
+\begin{table}[!htbp] \centering 
+  \caption{SOE dominating city} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{12}{c}{The Dependent variable:} \\ 
+\cline{2-13} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11) & (12)\\
+ \\[-1.8ex]& decile .3 & median &  mean & decile .7 & decile .3 & median &  mean & decile .7 & decile .3 & median &  mean & decile .7\\
+ \hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.187 & $-$0.283 & $-$0.247 & $-$0.068 & $-$0.084 & $-$0.225 & $-$0.205 & $-$0.032 & $-$0.146 & $-$0.266 & $-$0.236 & $-$0.206 \\ 
+  & (0.160) & (0.174) & (0.208) & (0.247) & (0.155) & (0.172) & (0.174) & (0.270) & (0.155) & (0.175) & (0.184) & (0.258) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 19,884 & 13,240 & 10,516 & 7,465 & 20,004 & 12,942 & 13,062 & 7,528 & 19,730 & 13,214 & 12,226 & 6,668 \\ 
+R$^{2}$ & 0.858 & 0.866 & 0.867 & 0.877 & 0.858 & 0.867 & 0.867 & 0.875 & 0.857 & 0.862 & 0.864 & 0.884 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{12}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{12}{l}{Heteroskedasticity-robust standard errors in parentheses} \\ 
+ & \multicolumn{12}{l}{are clustered by city} \\ 
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\end{document}

@@ -1,0 +1,36 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time: Fri, Mar 27, 2020 - 09:44:16
+\begin{table}[!htbp] \centering 
+  \caption{Private dominating city} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{12}{c}{The Dependent variable:} \\ 
+\cline{2-13} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11) & (12)\\
+ \\[-1.8ex]& decile .3 & median &  mean & decile .7 & decile .3 & median &  mean & decile .7 & decile .3 & median &  mean & decile .7\\
+ \hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.047 & $-$0.034 & $-$0.118 & $-$0.161 & $-$0.308 & $-$0.095 & $-$0.115 & $-$0.182 & $-$0.118 & $-$0.082 & $-$0.093 & $-$0.120 \\ 
+  & (0.177) & (0.167) & (0.150) & (0.136) & (0.201) & (0.173) & (0.167) & (0.135) & (0.194) & (0.169) & (0.156) & (0.144) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 10,792 & 17,436 & 20,160 & 23,211 & 10,672 & 17,734 & 17,614 & 23,148 & 10,946 & 17,462 & 18,450 & 24,008 \\ 
+R$^{2}$ & 0.865 & 0.856 & 0.856 & 0.854 & 0.867 & 0.855 & 0.855 & 0.854 & 0.868 & 0.859 & 0.859 & 0.851 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{12}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{12}{l}{Heteroskedasticity-robust standard errors in parentheses} \\ 
+ & \multicolumn{12}{l}{are clustered by city} \\ 
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\end{document}

@@ -1,0 +1,45 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time: Sun, Mar 29, 2020 - 12:18:31
+\begin{table}[!htbp] \centering 
+  \caption{Deciles capital} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{9}{c}{Dependent variable: \text { SO2 emission }_{i k t}} \\ 
+\cline{2-10} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9)\\
+ \\[-1.8ex]& decile .1 & decile .2 &  decile .3 & decile .4 & decile .5 & decile .6 &  decile .7 & decile .8 & decile .9\\
+ \hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.879 & $-$0.144 & $-$0.303 & 0.063 & 0.027 & $-$0.224 & $-$0.789$^{*}$ & $-$0.055 & $-$0.520 \\ 
+  & (1.383) & (0.342) & (0.508) & (0.415) & (0.487) & (0.611) & (0.406) & (0.468) & (0.506) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 3,669 & 4,550 & 2,513 & 3,676 & 3,439 & 1,955 & 3,387 & 2,873 & 2,465 \\ 
+R$^{2}$ & 0.900 & 0.875 & 0.923 & 0.897 & 0.895 & 0.913 & 0.908 & 0.911 & 0.904 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+A decile indicates the rank share of [output, capital, employement] of the SOEs \
+More specifically, the low deciles means a low presence of SOEs firms in the industries. \
+Deciles close to one, however, implies a stronger share of [output, capital, employement] in the \
+industries belong to those deciles.
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\%
+}
+ 
+\end{tablenotes}
+\end{table}
+
+\end{document}

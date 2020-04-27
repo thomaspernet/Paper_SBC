@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}
+
+\begin{table}[!htbp] \centering 
+  \caption{Revision results: Foreing} 
+  \label{} 
+   \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{The Dependent variable:} \\ 
+\cline{2-4} 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+  output_{cit} & $-$0.057 & $-$0.057 & $-$0.056 \\ 
+  & (0.084) & (0.084) & (0.084) \\ 
+  capital_{cit} & 0.929$^{***}$ & 0.929$^{***}$ & 0.935$^{***}$ \\ 
+  & (0.356) & (0.355) & (0.357) \\ 
+  labour_{cit} & 1.530$^{**}$ & 1.534$^{**}$ & 1.498$^{**}$ \\ 
+  & (0.724) & (0.725) & (0.724) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.021 & $-$0.049 & 0.011 \\ 
+  & (0.200) & (0.194) & (0.173) \\ 
+   TCZ_c \times \text{Period} \times \text{output share Foreign}_{i} & 0.856 &  &  \\ 
+  & (0.878) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{output share Foreign}_{i} & $-$0.874 &  &  \\ 
+  & (1.558) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{capital share Foreign}_{i}  &  & 0.650 &  \\ 
+  &  & (0.794) &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{capital share Foreign}_{i}  &  & $-$0.555 &  \\ 
+  &  & (1.338) &  \\ 
+   TCZ_c \times \text{Period} \times \text{labour share Foreign}_{i}  &  &  & 1.437$^{*}$ \\ 
+  &  &  & (0.830) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{labour share Foreign}_{i}  &  &  & $-$1.061 \\ 
+  &  &  & (1.583) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes \\ 
+Observations & 30,676 & 30,676 & 30,676 \\ 
+R$^{2}$ & 0.851 & 0.851 & 0.851 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{3}{l}{Heteroskedasticity-robust standard errors in parentheses} \\ 
+ & \multicolumn{3}{l}{are clustered by city} \\ 
+\end{tabular} 
+\end{adjustbox}
+\end{table} 
+
+
+\end{document}

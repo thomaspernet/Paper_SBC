@@ -1,0 +1,45 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time: Sun, Mar 29, 2020 - 12:27:23
+\begin{table}[!htbp] \centering 
+  \caption{Cumulative Deciles employment} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{9}{c}{Dependent variable: \text { SO2 emission }_{i k t}} \\ 
+\cline{2-10} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9)\\
+ \\[-1.8ex]& decile .1 & decile .2 &  decile .3 & decile .4 & decile .5 & decile .6 &  decile .7 & decile .8 & decile .9\\
+ \hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$1.006$^{*}$ & 0.051 & $-$0.186 & $-$0.116 & $-$0.110 & $-$0.082 & $-$0.121 & $-$0.167 & $-$0.136 \\ 
+  & (0.548) & (0.269) & (0.198) & (0.170) & (0.167) & (0.156) & (0.144) & (0.136) & (0.123) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 3,862 & 8,032 & 11,094 & 14,765 & 17,642 & 21,436 & 24,045 & 25,988 & 28,940 \\ 
+R$^{2}$ & 0.892 & 0.867 & 0.868 & 0.862 & 0.860 & 0.854 & 0.851 & 0.852 & 0.851 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+A decile indicates the rank share of [output, capital, employement] of the SOEs \
+More specifically, the low deciles means a low presence of SOEs firms in the industries. \
+Deciles close to one, however, implies a stronger share of [output, capital, employement] in the \
+industries belong to those deciles.
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\%
+}
+ 
+\end{tablenotes}
+\end{table}
+
+\end{document}

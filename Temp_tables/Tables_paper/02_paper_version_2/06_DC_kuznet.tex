@@ -1,0 +1,52 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time \times Sun, Apr 26, 2020 - 11:12:08
+\begin{table}[!htbp] \centering 
+  \caption{\\ Turning points and Kuznets curves} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{10}{c}{Dependent variable \text { SO2 emission }_{i k t}} \\ 
+\cline{2-11}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{City}&\multicolumn{2}{c}{Concentration}&\multicolumn{2}{c}{Output}&\multicolumn{2}{c}{Capital}&\multicolumn{2}{c}{Employment}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10)\\
+ \\[-1.8ex]& TCZ & No TCZ & Concentrated & No Concentrated & SOE dominated & SOE No dominated & SOE dominated & SOE No dominated & SOE dominated & SOE No dominated\\
+ \hline \\[-1.8ex] 
+  \text{(ln gdp per cap)}_{ct}  & 2.708$^{***}$ & 0.269 & $-$0.626 & 3.391$^{***}$ & $-$0.096 & 2.611$^{***}$ & 1.437 & 2.559$^{***}$ & 0.434 & 2.984$^{***}$ \\ 
+  & (0.927) & (1.428) & (1.192) & (0.971) & (1.784) & (0.837) & (1.882) & (0.847) & (1.555) & (0.854) \\ 
+   \text{(ln gdp per cap)}^2_{ct}  & $-$0.132$^{***}$ & 0.002 & 0.039 & $-$0.158$^{***}$ & 0.017 & $-$0.127$^{***}$ & $-$0.062 & $-$0.126$^{***}$ & $-$0.015 & $-$0.143$^{***}$ \\ 
+  & (0.045) & (0.071) & (0.061) & (0.047) & (0.090) & (0.041) & (0.096) & (0.041) & (0.080) & (0.042) \\ 
+   \text{(ln population)}_{ct}  & 0.062 & 0.011 & 0.328$^{*}$ & 0.026 & 0.043 & 0.040 & $-$0.093 & 0.055 & 0.054 & 0.036 \\ 
+  & (0.103) & (0.168) & (0.191) & (0.102) & (0.211) & (0.096) & (0.221) & (0.094) & (0.218) & (0.092) \\ 
+ \hline \\[-1.8ex] 
+turning point RMB & 28795 & - & - & 45396 & - & 30264 & - & 24867 & - & 35190 \\ 
+turning point Dollar & 3568 & - & - & 5625 & - & 3750 & - & 3081 & - & 4361 \\ 
+City fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 22,865 & 7,330 & 9,153 & 21,042 & 9,160 & 21,035 & 9,137 & 21,058 & 8,993 & 21,202 \\ 
+R$^{2}$ & 0.344 & 0.415 & 0.405 & 0.340 & 0.376 & 0.353 & 0.375 & 0.357 & 0.372 & 0.357 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+
+\end{document}

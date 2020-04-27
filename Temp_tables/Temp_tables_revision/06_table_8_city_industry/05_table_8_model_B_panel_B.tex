@@ -1,0 +1,56 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time \times Thu, Apr 09, 2020 - 16:22:24
+\begin{table}[!htbp] \centering 
+  \caption{Test Median city} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccccccccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{15}{c}{Dependent variable \times \text { SO2 emission }_{i k t}} \\ 
+\cline{2-16} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11) & (12) & (13) & (14) & (15)\\
+ \\[-1.8ex]& Output & Capital & Labour & Output & Capital & Labour & Output & Capital & Labour & Output & Capital & Labour & Output & Capital & Labour\\
+ \hline \\[-1.8ex] 
+   target_c \times \text{Period} \times \text{Polluted}_i  & $-$0.267 & $-$0.343 & $-$0.354 & $-$0.417$^{*}$ & $-$0.459$^{*}$ & $-$0.483$^{*}$ & $-$0.357 & $-$0.386 & $-$0.429 & $-$0.685 & $-$0.766 & $-$0.770 & $-$0.833 & $-$0.918 & $-$0.934$^{*}$ \\ 
+  & (0.291) & (0.317) & (0.328) & (0.252) & (0.276) & (0.279) & (0.267) & (0.288) & (0.293) & (0.597) & (0.622) & (0.651) & (0.523) & (0.559) & (0.568) \\ 
+   target_c \times \text{Period} \times \text{output share SOE}_{i}  & 1.204 &  &  & 0.096 &  &  & 0.828 &  &  & 1.011 &  &  & $-$0.213 &  &  \\ 
+  & (0.958) &  &  & (0.695) &  &  & (1.147) &  &  & (1.941) &  &  & (2.136) &  &  \\ 
+   target_c \times \text{Period} \times \text{Polluted}_i \times \text{output share SOE}_{i}  & $-$1.220 &  &  & 0.074 &  &  & $-$1.046 &  &  & $-$1.398 &  &  & 0.739 &  &  \\ 
+  & (1.267) &  &  & (0.909) &  &  & (1.375) &  &  & (2.670) &  &  & (2.477) &  &  \\ 
+   target_c \times \text{Period} \times \text{capital share SOE}_{i}  &  & 0.723 &  &  & 0.171 &  &  & 0.706 &  &  & 1.283 &  &  & 0.243 &  \\ 
+  &  & (0.629) &  &  & (0.535) &  &  & (0.773) &  &  & (1.453) &  &  & (1.308) &  \\ 
+   target_c \times \text{Period} \times \text{Polluted}_i \times \text{capital share SOE}_{i}  &  & $-$0.374 &  &  & 0.198 &  &  & $-$0.598 &  &  & $-$0.727 &  &  & 0.715 &  \\ 
+  &  & (0.959) &  &  & (0.774) &  &  & (1.008) &  &  & (1.993) &  &  & (1.767) &  \\ 
+   target_c \times \text{Period} \times \text{labour share SOE}_{i}  &  &  & 0.542 &  &  & 0.060 &  &  & 0.470 &  &  & 1.280 &  &  & $-$0.217 \\ 
+  &  &  & (0.843) &  &  & (0.667) &  &  & (0.921) &  &  & (2.068) &  &  & (1.956) \\ 
+   target_c \times \text{Period} \times \text{Polluted}_i \times \text{labour share SOE}_{i}  &  &  & $-$0.309 &  &  & 0.372 &  &  & $-$0.339 &  &  & $-$0.825 &  &  & 1.050 \\ 
+  &  &  & (1.212) &  &  & (0.898) &  &  & (1.169) &  &  & (2.729) &  &  & (2.346) \\ 
+ \hline \\[-1.8ex] 
+City fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Yes fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 23,741 & 23,741 & 23,741 & 27,869 & 27,869 & 27,869 & 26,193 & 26,193 & 26,193 & 16,163 & 16,163 & 16,163 & 12,761 & 12,761 & 12,761 \\ 
+R$^{2}$ & 0.847 & 0.847 & 0.847 & 0.852 & 0.852 & 0.852 & 0.852 & 0.852 & 0.852 & 0.871 & 0.871 & 0.871 & 0.870 & 0.870 & 0.870 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+for the regressions with city,industry, year fixed effect (i.e. columns 1-3).
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+
+\end{document}

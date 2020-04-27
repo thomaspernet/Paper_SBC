@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}
+
+\begin{table}[!htbp] \centering 
+  \caption{Revision results: Foreing -SOE} 
+  \label{} 
+  \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{The Dependent variable:} \\ 
+\cline{2-4} 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.294 & $-$0.435 & $-$0.342 \\ 
+  & (0.238) & (0.287) & (0.234) \\ 
+   TCZ_c \times \text{Period} \times \text{output share Foreign}_{i} & 0.464 &  &  \\ 
+  & (0.963) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{output share SOE}_{i}  & $-$0.706 &  &  \\ 
+  & (0.619) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{output share Foreign}_{i} & 0.073 &  &  \\ 
+  & (1.607) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{output share SOE}_{i}  & 1.278$^{*}$ &  &  \\ 
+  & (0.748) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{capital share Foreign}_{i}  &  & 0.082 &  \\ 
+  &  & (0.910) &  \\ 
+   TCZ_c \times \text{Period} \times \text{capital share SOE}_{i}  &  & $-$0.661 &  \\ 
+  &  & (0.503) &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{capital share Foreign}_{i}  &  & 0.627 &  \\ 
+  &  & (1.544) &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{capital share SOE}_{i}  &  & 1.176$^{*}$ &  \\ 
+  &  & (0.670) &  \\ 
+   TCZ_c \times \text{Period} \times \text{labour share Foreign}_{i}  &  &  & 0.937 \\ 
+  &  &  & (0.937) \\ 
+   TCZ_c \times \text{Period} \times \text{labour share SOE}_{i}  &  &  & $-$0.727 \\ 
+  &  &  & (0.621) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{labour share Foreign}_{i}  &  &  & 0.161 \\ 
+  &  &  & (1.659) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{labour share SOE}_{i}  &  &  & 1.384$^{*}$ \\ 
+  &  &  & (0.748) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes \\ 
+Observations & 30,676 & 30,676 & 30,676 \\ 
+R$^{2}$ & 0.851 & 0.851 & 0.851 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{3}{l}{Heteroskedasticity-robust standard errors in parentheses} \\ 
+ & \multicolumn{3}{l}{are clustered by city} \\ 
+\end{tabular} 
+\end{adjustbox}
+\end{table} 
+
+\end{document}

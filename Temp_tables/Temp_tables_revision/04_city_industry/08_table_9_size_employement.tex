@@ -1,0 +1,49 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time \times Sun, Apr 05, 2020 - 10:40:08
+\begin{table}[!htbp] \centering 
+  \caption{Deciles Employement} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{10}{c}{Dependent variable \times \text { SO2 emission }_{i k t}} \\ 
+\cline{2-11} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10)\\
+ \\[-1.8ex]& decile .1 & decile .2 &  decile .3 & decile .4 & decile .5 & decile .6 &  decile .7 & decile .8 & decile .9 &  Baseline\\
+ \hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.420 & $-$0.159 & $-$0.272 & $-$0.191 & $-$0.218 & $-$0.257$^{*}$ & $-$0.232$^{*}$ & $-$0.213 & $-$0.225$^{*}$ & $-$0.215 \\ 
+  & (0.371) & (0.192) & (0.173) & (0.167) & (0.161) & (0.148) & (0.137) & (0.136) & (0.135) & (0.136) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{labour share SOE}_{ci}  & 2.038$^{*}$ & 0.640 & 0.343 & 0.039 & 0.300 & 0.477 & 0.432 & 0.369 & 0.431 & 0.415 \\ 
+  & (1.112) & (0.796) & (0.486) & (0.530) & (0.466) & (0.407) & (0.373) & (0.365) & (0.355) & (0.355) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 7,646 & 13,563 & 17,682 & 22,109 & 25,418 & 28,062 & 29,422 & 30,132 & 30,388 & 30,676 \\ 
+R$^{2}$ & 0.878 & 0.861 & 0.854 & 0.845 & 0.846 & 0.847 & 0.848 & 0.850 & 0.851 & 0.852 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+A decile indicates the rank of the city-industry concentration (Herfhindal index) \
+More specifically, the low deciles means a low concentration by city-industry \
+Deciles close to one, however, implies a stronger concentration.
+Due to limited space, only the coefficients of interest are presented 
+for the regressions with city,industry, year fixed effect (i.e. columns 1-3).
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+
+\end{document}

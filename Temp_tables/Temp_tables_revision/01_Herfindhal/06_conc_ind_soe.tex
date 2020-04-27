@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}
+
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Mar 08, 2020 - 12:20:15
+\begin{table}[!htbp] \centering 
+  \caption{Baseline results revision: concentration} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{The Dependent variable:} \\ 
+\cline{2-7} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.032 & $-$0.142 & $-$0.097 & 0.086 & 0.037 & 0.060 \\ 
+  & (0.639) & (0.643) & (0.635) & (0.698) & (0.688) & (0.679) \\ 
+   TCZ_c \times \text{Period} \times \text{Herfindahl}_{i} & 0.029 & 0.013 & 0.013 & 0.451 & 0.491 & 0.528 \\ 
+  & (0.819) & (0.810) & (0.818) & (0.946) & (0.943) & (0.914) \\ 
+   TCZ_c \times \text{Period} \times \text{output share SOE}_{i}  & $-$0.199 &  &  & $-$0.944$^{*}$ &  &  \\ 
+  & (0.431) &  &  & (0.533) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{capital share SOE}_{i}  &  & $-$0.103 &  &  & $-$0.774$^{*}$ &  \\ 
+  &  & (0.325) &  &  & (0.408) &  \\ 
+   TCZ_c \times \text{Period} \times \text{labour share SOE}_{i}  &  &  & $-$0.137 &  &  & $-$1.148$^{**}$ \\ 
+  &  &  & (0.441) &  &  & (0.518) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{Herfindahl}_{i} & $-$0.404 & $-$0.240 & $-$0.345 & $-$0.597 & $-$0.582 & $-$0.687 \\ 
+  & (0.932) & (0.937) & (0.931) & (1.034) & (1.019) & (1.001) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{output share SOE}_{i}  & 1.216$^{**}$ &  &  & 1.478$^{**}$ &  &  \\ 
+  & (0.586) &  &  & (0.649) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{capital share SOE}_{i}  &  & 0.787$^{*}$ &  &  & 1.175$^{**}$ &  \\ 
+  &  & (0.459) &  &  & (0.541) &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{labour share SOE}_{i}  &  &  & 1.048$^{*}$ &  &  & 1.702$^{***}$ \\ 
+  &  &  & (0.572) &  &  & (0.612) \\ 
+ \hline \\[-1.8ex] 
+City fixed effects & Yes & Yes & Yes & No & No & No \\ 
+Industry fixed effects & Yes & Yes & Yes & No & No & No \\ 
+Yes fixed effects & Yes & Yes & Yes & No & No & No \\ 
+City-year fixed effects & No & No & No & Yes & Yes & Yes \\ 
+Industry-year fixed effects & No & No & No & Yes & Yes & Yes \\ 
+City-industry fixed effects & No & No & No & Yes & Yes & Yes \\ 
+Observations & 30,676 & 30,676 & 30,676 & 30,676 & 30,676 & 30,676 \\ 
+R$^{2}$ & 0.346 & 0.346 & 0.346 & 0.851 & 0.851 & 0.851 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{6}{l}{Heteroskedasticity-robust standard errors in parentheses} \\ 
+ & \multicolumn{6}{l}{are clustered by city} \\ 
+\end{tabular}
+\end{adjustbox}
+\end{table} 
+
+
+
+\end{document}

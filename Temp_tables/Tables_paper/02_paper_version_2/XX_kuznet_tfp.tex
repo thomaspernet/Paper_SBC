@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}
+
+\begin{table}[!htbp] \centering 
+  \caption{Reduction mandate and TFP: below (above) Kuznets' turning points} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{Dependent variable \text { TFP }_{fikt}} \\ 
+\cline{2-6}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{SOE}&\multicolumn{2}{c}{PRIVATE}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) \\
+ \\[-1.8ex]& Above & Below & Above & Below \\
+ \hline \\[-1.8ex] 
+ target_c \times \text{Period} \times \text{Polluted}_i  & 0.123^{* *} (0.051) & 0.130 (0.143) & -0.017 (0.021)&  -0.161 (0.100)&  SOE Capital\\
+Observations  & 18,061&22,691 & 419,579 & 180,956&  Table XX: RMB 24.867\\ 
+R$^{2}$  & 0.958&0.966&0.869&0.894&  \\
+\hline 
+target_c \times \text{Period} \times \text{Polluted}_i  & 
+0.156$^{* * *}$ (0.056)& 0.178 (0.137)& $-$0.017  (0.021)& $-$0.146$^{*}$ (0.082) & TCZ \\
+Observations  & 13,935 & 26,817 & 366,289 & 234,246 & Table XX: RMB 2428.795 \\ 
+R$^{2}$  &0.964&0.964&0.879&0.893&  \\ 
+\hline 
+target_c \times \text{Period} \times \text{Polluted}_i  &  0.168^{* * *}  (0.058) & 0.108 (0.126)  &-0.013 (0.020) & 0.124 (0.076)&  SOE output\\
+Observations  & 12,605 & 28,147 & 350,740 & 249,795 &  Table XX: RMB 2430.264\\ 
+R$^{2}$  & 0.965&0.963&0.882&0.892 &  \\
+\hline 
+target_c \times \text{Period} \times \text{Polluted}_i  &  0.117 (0.071) & 0.042 (0.116) & -0.018 (0.020) & -0.109 (0.069)&  SOE employment\\
+Observations  & 9.397&31,355 & 284,694 & 315,841 &  Table XX: RMB 2435.190\\ 
+R$^{2}$  &0.971&0.960&0.890&0.883&  \\
+\hline 
+target_c \times \text{Period} \times \text{Polluted}_i  &0.047 (0.102) & 0.024 (0.106) & -0.009 (0.020)& -0.008 (0.048) &  Concentrated\\
+Observations  & 5,130 & 35,622 & 186,699 & 413,836&  Table XX: RMB 2445.396\\ 
+R$^{2}$  & 0.979&0.956&0.905&0.876&  \\
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ \footnotesize{
+The columns $Above$ include cities strickly above the turning point computed in tables XX, while $ Below$ include cities below the turning point.
+Due to limited space, only the coefficients of interest are presented 
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \\
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+\end{tablenotes}
+\end{table}
+
+\end{document}

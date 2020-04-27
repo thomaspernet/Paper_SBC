@@ -1,0 +1,54 @@
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}% Date and time \times Sun, Apr 26, 2020 - 10:45:58
+\begin{table}[!htbp] \centering 
+  \caption{Parallel trend} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{7}{c}{Dependent variable \text { SO2 emission }_{i k t}} \\ 
+\cline{2-8}
+            
+\\[-1.8ex]
+            &\multicolumn{1}{c}{}&\multicolumn{2}{c}{Output}&\multicolumn{2}{c}{Capital}&\multicolumn{2}{c}{employment}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\
+ \\[-1.8ex]& Full sample & No SOE & SOE & No SOE & SOE & No SOE & SOE\\
+ \hline \\[-1.8ex] 
+  2003 & $-$0.230 & $-$0.232 & $-$0.581 & $-$0.214 & $-$0.326 & $-$0.250 & $-$0.308 \\ 
+  & (0.222) & (0.248) & (0.838) & (0.243) & (0.833) & (0.242) & (0.846) \\ 
+  2004 & $-$0.156 & $-$0.174 & 0.148 & $-$0.197 & 0.498 & $-$0.229 & 0.498 \\ 
+  & (0.222) & (0.240) & (0.808) & (0.237) & (0.772) & (0.239) & (0.807) \\ 
+  2005 & $-$0.347 & $-$0.364 & $-$0.290 & $-$0.350 & $-$0.137 & $-$0.307 & $-$0.336 \\ 
+  & (0.258) & (0.277) & (0.886) & (0.273) & (0.884) & (0.271) & (0.905) \\ 
+  2006 & $-$0.598$^{**}$ & $-$0.645$^{**}$ & $-$0.082 & $-$0.625$^{**}$ & $-$0.019 & $-$0.630$^{**}$ & $-$0.246 \\ 
+  & (0.263) & (0.279) & (0.950) & (0.276) & (0.956) & (0.276) & (0.978) \\ 
+  2007 & $-$0.715$^{***}$ & $-$0.686$^{**}$ & $-$0.308 & $-$0.703$^{**}$ & $-$0.247 & $-$0.712$^{**}$ & $-$0.273 \\ 
+  & (0.265) & (0.280) & (0.926) & (0.276) & (0.902) & (0.282) & (0.947) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 30,676 & 21,511 & 9,165 & 21,527 & 9,149 & 21,665 & 9,011 \\ 
+R$^{2}$ & 0.852 & 0.855 & 0.872 & 0.856 & 0.868 & 0.856 & 0.869 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+
+\end{document}

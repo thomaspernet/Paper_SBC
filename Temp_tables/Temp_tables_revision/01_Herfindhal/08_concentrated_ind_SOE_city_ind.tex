@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}
+
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Mar 08, 2020 - 14:34:48
+\begin{table}[!htbp] \centering 
+  \caption{Baseline results revision} 
+\label{}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{8}{c}{The Dependent variable:} \\ 
+\cline{2-9} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+\hline \\[-1.8ex] 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i  & $-$0.070 & $-$0.330$^{**}$ & $-$0.291$^{**}$ & $-$0.313$^{**}$ & $-$0.392 & $-$0.326$^{*}$ & $-$0.366$^{**}$ & $-$0.321$^{**}$ \\ 
+  & (0.219) & (0.157) & (0.139) & (0.131) & (0.272) & (0.173) & (0.163) & (0.151) \\ 
+   TCZ_c \times \text{Period} \times \text{Concencentrated 25}_{i} & 0.162 &  &  &  & 0.108 &  &  &  \\ 
+  & (0.144) &  &  &  & (0.213) &  &  &  \\ 
+   \text{Period} \times \text{Polluted}_i \times \text{Concencentrated 25}_{i} & 0.533$^{***}$ &  &  &  & 0.088 &  &  &  \\ 
+  & (0.186) &  &  &  & (0.270) &  &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Concencentrated 50}_{i} &  & 0.015 &  &  &  & 0.050 &  &  \\ 
+  &  & (0.121) &  &  &  & (0.167) &  &  \\ 
+   \text{Period} \times \text{Polluted}_i \times \text{Concencentrated 50}_{i} &  & 0.076 &  &  &  & 0.019 &  &  \\ 
+  &  & (0.157) &  &  &  & (0.180) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Concencentrated 75}_{i} &  &  & $-$0.006 &  &  &  & $-$0.262 &  \\ 
+  &  &  & (0.150) &  &  &  & (0.186) &  \\ 
+   \text{Period} \times \text{Polluted}_i \times \text{Concencentrated 75}_{i} &  &  & 0.052 &  &  &  & $-$0.174 &  \\ 
+  &  &  & (0.179) &  &  &  & (0.201) &  \\ 
+   TCZ_c \times \text{Period} \times \text{Concencentrated 85}_{i} &  &  &  & $-$0.143 &  &  &  & $-$0.265 \\ 
+  &  &  &  & (0.160) &  &  &  & (0.241) \\ 
+   \text{Period} \times \text{Polluted}_i \times \text{Concencentrated 85}_{i} &  &  &  & 0.024 &  &  &  & $-$0.062 \\ 
+  &  &  &  & (0.196) &  &  &  & (0.241) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{Concencentrated 25}_{i} & $-$0.270 &  &  &  & 0.165 &  &  &  \\ 
+  & (0.221) &  &  &  & (0.279) &  &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{Concencentrated 50}_{i} &  & 0.094 &  &  &  & 0.087 &  &  \\ 
+  &  & (0.176) &  &  &  & (0.204) &  &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{Concencentrated 75}_{i} &  &  & 0.019 &  &  &  & 0.421$^{*}$ &  \\ 
+  &  &  & (0.197) &  &  &  & (0.233) &  \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{Concencentrated 85}_{i} &  &  &  & 0.193 &  &  &  & 0.370 \\ 
+  &  &  &  & (0.223) &  &  &  & (0.304) \\ 
+   TCZ_c \times \text{Period} \times \text{Polluted}_i \times \text{output share SOE}_{i}  & 1.227$^{**}$ & 1.126$^{**}$ & 1.143$^{**}$ & 1.117$^{**}$ & 1.234$^{**}$ & 1.289$^{**}$ & 1.176$^{*}$ & 1.223$^{*}$ \\ 
+  & (0.529) & (0.532) & (0.530) & (0.527) & (0.611) & (0.627) & (0.640) & (0.633) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & No & No & No & No & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & No & No & No & No & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & No & No & No & No & Yes & Yes & Yes & Yes \\ 
+Observations & 30,676 & 30,676 & 30,676 & 30,676 & 30,676 & 30,676 & 30,676 & 30,676 \\ 
+R$^{2}$ & 0.352 & 0.353 & 0.352 & 0.350 & 0.852 & 0.851 & 0.852 & 0.852 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{8}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{8}{l}{Heteroskedasticity-robust standard errors in parentheses} \\ 
+ & \multicolumn{8}{l}{are clustered by city} \\ 
+\end{tabular}
+\end{adjustbox}
+\end{table} 
+
+
+\end{document}
