@@ -1,0 +1,613 @@
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,
+ulem,graphicx,color,setspace,sectsty,comment,footmisc,
+natbib,
+pdflscape,subfigure,array,hyperref, booktabs,
+threeparttable, siunitx, adjustbox,
+%rotating
+}
+
+\begin{document}
+
+
+\begin{table}[!htbp] \centering
+\caption{\\ SO2 reduction during the subsequent FYPs}
+\label{table_1}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{lrrrr}
+\toprule
+             Cities &  1998-2001 &  2002-2005 &  2006-2010 &  Target \\
+\midrule
+             No TCZ &     21.00\% &     64.00\% &    -11.00\% &  -6.00\% \\
+                TCZ &     -7.00\% &     38.00\% &    -15.00\% & -16.00\% \\
+ No Dominated SOE^ a &    -31.00\% &     30.00\% &    -16.00\% & -10.00\% \\
+    Dominated SOE^ a &      6.00\% &     21.00\% &    -17.00\% & -12.00\% \\
+        Full Sample &     -2.00\% &     45.00\% &    -13.00\% & -10.00\% \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+
+Sources: Author's own computation \ 
+
+The list of TCZ is provided by the State Council, 1998.
+"Official Reply to the State Council Concerning Acid Rain Control Areas
+and Sulfur Dioxide Pollution Control Areas".
+The information about the SO2 level are collected using various edition
+of the China Environment Statistics Yearbook.
+We compute the reduction of SO2 emission using the same methodology
+as Chen and al.(2018). \ 
+
+$a$ (No) Dominated SOEs cities refer to cities where the 
+(output, capital, employment) share of SOEs is (below) above a critical threshold,
+for instance the 60th decile
+ 
+\end{tablenotes}
+\end{table}
+
+\begin{equation} \label{eq:equation_1}
+\begin{aligned} 
+\text {Log SO2 emission }_{i k t}=& \alpha (Target_{i} \times \text { Polluted sectors }_{k} \times \text { Period }) 
+& + \\ \theta {X}_{i k t}+\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt}
+\end{aligned}
+\end{equation}
+
+\begin{table}[!htbp] \centering
+\caption{\\ Summary statistics by city characteristics}
+\label{table_2}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{lrrr}
+\toprule
+index & Output share SOE_i & Capital share SOE_i & Employment share SOE_i \\
+\midrule
+Full sample          &             24.95\% &              35.48\% &                 29.19\% \\
+Central              &             28.78\% &              41.80\% &                 34.17\% \\
+Coastal              &             11.28\% &              18.50\% &                 12.04\% \\
+Northeast            &             26.16\% &              38.73\% &                 33.83\% \\
+Northwest            &             43.38\% &              51.06\% &                 49.53\% \\
+Southwest            &             31.02\% &              44.59\% &                 36.08\% \\
+Central              &             28.78\% &              41.80\% &                 34.17\% \\
+Eastern              &             15.99\% &              24.83\% &                 19.05\% \\
+Western              &             37.71\% &              48.44\% &                 42.82\% \\
+No TCZ               &             24.32\% &              35.07\% &                 29.97\% \\
+TCZ                  &             25.34\% &              35.74\% &                 28.70\% \\
+Concentrated city    &             34.09\% &              45.39\% &                 37.89\% \\
+No Concentrated city &             15.14\% &              24.86\% &                 19.86\% \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+
+Sources: Author's own computation 
+
+The list of TCZ is provided by the State Council, 1998. 
+
+Output $\text { Share SOE }_{i}$ refers to the ratio of output
+(respectively capital, employment) of SOEs over the total production
+(capital, employment) in city $i$
+      
+ 
+\end{tablenotes}
+\end{table}
+
+\begin{table}[!htbp] \centering
+    \caption{\\ Summary statistics by city characteristics}
+      \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{tab:table_3}
+    \begin{tabular}{lrr}
+      \multicolumn{1}{l}{\textbf{\small Panel A: Panel A: Pollution emission and Macro-variables}} \\
+      \toprule
+      & \multicolumn{1}{c}{No TCZ} & \multicolumn{1}{c}{TCZ} \\
+      \midrule
+      $SO2_{ikt}$  & 182,873 & 172,032 \\
+      $\text{SO2 over population}_{ikt}$ &   2,754 &   1,633 \\
+      $\text{gdp per capita}_i$ &  19,796 &  32,796 \\
+      $\text{population}_i$ &      99 &     266 \\
+      \bottomrule
+      \\ %%% Create second table
+      \multicolumn{1}{l}{\textbf{\small Panel B: SO2 reduction over 2000-2010}} \\
+      \toprule
+      {} & \multicolumn{2}{l}{\footnotesize difference (10.000 tons units)} \\
+                  & No TCZ   & TCZ     \\
+      Location    &          &         \\
+      \midrule
+      Full sample &    -192 & -436  \\
+      Central     &    -238 & -232 \\
+      Coastal     &    -138 & -659  \\
+      Northeast   &    -206 &  -89 \\
+      Northwest   &    -115 & -277  \\
+      Southwest   &    -272 & -503 \\
+      Non Coastal &    -215 & -302  \\
+      Coastal     &    -140 & -578  \\
+      \bottomrule
+      \hline
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      Sources: Author's own computation \\
+      Panel A provides summary statistics for the main variables used in the subsequent empirical analysis. \\
+  Panel B provides summary statistics for the SO2 emission (in 10.000 tons) for Chinese cities (228), split into TCZ (140) and non-TCZ (88) cities \\
+  $SO2_{ikt}$ is in kilos and $\text{population}_i$ in million
+      \\
+    \end{tablenotes}
+\end{table}
+
+\begin{equation} \label{eq:equation_2}
+\Delta SO2_{i, 05 − 10}=\Delta SO2_{p, 05 − 10} \times \sum_{k=1}^{29} \mu_{k} \frac{\text { output value of industry } k \text { in city } i}{\text { output value of industry } k \text { in province } p}
+\end{equation}
+
+
+\begin{table}[!htbp] \centering
+\caption{Summary statistics of Target by city characteristics}
+\label{table_4}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{lrrr}
+\toprule
+{} & All Cities & No SOE dominated & SOE dominated \\
+index                &            &                  &               \\
+\midrule
+Full sample          &     12.07\% &           11.89\% &        12.39\% \\
+Central              &      8.97\% &            7.47\% &        10.99\% \\
+Coastal              &     17.79\% &           18.04\% &        16.05\% \\
+Northeast            &      5.76\% &            5.17\% &         6.81\% \\
+Northwest            &      5.70\% &            2.87\% &         7.52\% \\
+Southwest            &     16.83\% &           11.82\% &        21.53\% \\
+Central              &      8.97\% &            7.47\% &        10.99\% \\
+Eastern              &     14.13\% &           14.73\% &        11.52\% \\
+Western              &     11.93\% &            8.61\% &        14.20\% \\
+No TCZ               &      5.69\% &            5.03\% &         7.20\% \\
+TCZ                  &     16.07\% &           16.75\% &        14.99\% \\
+Concentrated city    &      9.72\% &            6.11\% &        12.87\% \\
+No Concentrated city &     14.58\% &           15.34\% &        10.72\% \\
+Coastal              &     17.79\% &           18.04\% &        16.05\% \\
+No Coastal           &      9.64\% &            7.60\% &        11.83\% \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+
+Sources: Author's own computation 
+
+The list of TCZ is provided by the State Council, 1998. 
+(No) SOE Dominated cities refers to cities where the 
+(output, capital, employment) share of SOEs is (below) above a critical threshold,
+for instance the 60th decile
+
+(No) Concentrated city refers to cities where the 
+Herfindahl index is (below) above a critical threshold,
+for instance the 60th decile
+      
+ 
+\end{tablenotes}
+\end{table}
+
+\begin{table}[!htbp] \centering
+  %\resizebox{1\textwidth}{!}{
+    %\begin{threeparttable}
+    \caption{Baseline Regression: State versus Private sectors}
+      \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+     \label{table_5}
+      \begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+        \multicolumn{1}{l}{\textbf{Panel A: SOE Dominating sectors}} \\
+        \toprule
+        & \multicolumn{8}{c}{Dependent variable \text { SO2 emission }_{i k t}} \\ 
+        \cline{2-9}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{Full sample}&\multicolumn{2}{c}{Output}&\multicolumn{2}{c}{Capital}&\multicolumn{2}{c}{Employment}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+\hline \\[-1.8ex] 
+  output_{cit} & 0.144 & $-$0.066 & 0.875$^{*}$ & 0.216 & 1.092$^{**}$ & 0.308 & 0.995$^{**}$ & 0.087 \\ 
+  & (0.152) & (0.089) & (0.457) & (0.257) & (0.464) & (0.397) & (0.421) & (0.280) \\ 
+  capital_{cit} & 1.481$^{**}$ & 0.971$^{***}$ & $-$3.614$^{***}$ & $-$0.611 & $-$4.106$^{***}$ & $-$0.485 & $-$4.094$^{***}$ & $-$0.393 \\ 
+  & (0.730) & (0.366) & (1.088) & (0.617) & (1.146) & (0.773) & (1.104) & (0.708) \\ 
+  labour_{cit} & 3.089$^{***}$ & 1.538$^{**}$ & 11.671$^{***}$ & 4.601$^{***}$ & 12.228$^{***}$ & 5.216$^{***}$ & 12.327$^{***}$ & 4.783$^{***}$ \\ 
+  & (0.832) & (0.767) & (2.326) & (1.475) & (2.374) & (1.353) & (2.359) & (1.548) \\ 
+   target_c \times \text{Period}  & $-$0.003 &  & 0.087 &  & 0.012 &  & 0.128 &  \\ 
+  & (0.104) &   & (0.381) &   & (0.379) &   & (0.379) &   \\ 
+   target_c \times \text{Polluted}_i  & 0.438$^{***}$ &  & 0.838$^{**}$ &  & 0.748$^{*}$ &  & 0.839$^{**}$ &  \\ 
+  & (0.140) &   & (0.383) &   & (0.390) &   & (0.379) &   \\ 
+   target_c \times \text{Period} \times \text{Polluted}_i  & $-$0.291$^{**}$ & $-$0.430$^{***}$ & $-$0.430 & 0.009 & $-$0.344 & $-$0.159 & $-$0.468 & $-$0.215 \\ 
+  & (0.146) & (0.132) & (0.465) & (0.465) & (0.443) & (0.435) & (0.432) & (0.461) \\ 
+ \hline \\[-1.8ex] 
+City fixed effects & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+Industry fixed effects & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+Year fixed effects & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+City-year fixed effects & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+Industry-year fixed effects & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+City-industry fixed effects & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+Observations & 30,676 & 30,676 & 9,165 & 9,165 & 9,149 & 9,149 & 9,011 & 9,011 \\ 
+R$^{2}$ & 0.346 & 0.851 & 0.377 & 0.872 & 0.376 & 0.868 & 0.373 & 0.869 \\ 
+        \bottomrule
+        \\ %%% Create second table
+        \multicolumn{1}{l}{\textbf{Panel B: Prviate Dominating sectors}} \\
+        \toprule
+        & \multicolumn{8}{c}{Dependent variable \text { SO2 emission }_{i k t}} \\ 
+        \cline{2-9}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{Full sample}&\multicolumn{2}{c}{Output}&\multicolumn{2}{c}{Capital}&\multicolumn{2}{c}{Employment}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+\hline \\[-1.8ex] 
+  output_{cit} & 0.144 & $-$0.066 & 0.116 & $-$0.077 & 0.107 & $-$0.077 & 0.113 & $-$0.073 \\ 
+  & (0.152) & (0.089) & (0.134) & (0.094) & (0.130) & (0.090) & (0.130) & (0.095) \\ 
+  capital_{cit} & 1.481$^{**}$ & 0.971$^{***}$ & 1.885$^{***}$ & 0.942$^{**}$ & 1.930$^{***}$ & 0.905$^{**}$ & 1.744$^{***}$ & 0.911$^{**}$ \\ 
+  & (0.730) & (0.366) & (0.575) & (0.445) & (0.557) & (0.401) & (0.551) & (0.441) \\ 
+  labour_{cit} & 3.089$^{***}$ & 1.538$^{**}$ & 2.592$^{***}$ & 1.423$^{*}$ & 2.567$^{***}$ & 1.329$^{*}$ & 2.611$^{***}$ & 1.376 \\ 
+  & (0.832) & (0.767) & (0.718) & (0.798) & (0.707) & (0.778) & (0.731) & (0.847) \\ 
+   target_c \times \text{Period}  & $-$0.003 &  & $-$0.050 &  & $-$0.031 &  & $-$0.049 &  \\ 
+  & (0.104) &   & (0.105) &   & (0.105) &   & (0.105) &   \\ 
+   target_c \times \text{Polluted}_i  & 0.438$^{***}$ &  & 0.388$^{***}$ &  & 0.394$^{***}$ &  & 0.369$^{**}$ &  \\ 
+  & (0.140) &   & (0.148) &   & (0.145) &   & (0.150) &   \\ 
+   target_c \times \text{Period} \times \text{Polluted}_i  & $-$0.291$^{**}$ & $-$0.430$^{***}$ & $-$0.250$^{*}$ & $-$0.429$^{***}$ & $-$0.284$^{*}$ & $-$0.430$^{***}$ & $-$0.256$^{*}$ & $-$0.434$^{***}$ \\ 
+  & (0.146) & (0.132) & (0.150) & (0.141) & (0.151) & (0.140) & (0.151) & (0.144) \\ 
+ \hline \\[-1.8ex] 
+City fixed effects & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+Industry fixed effects & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+Year fixed effects & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+City-year fixed effects & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+Industry-year fixed effects & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+City-industry fixed effects & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+Observations & 30,676 & 30,676 & 21,511 & 21,511 & 21,527 & 21,527 & 21,665 & 21,665 \\ 
+R$^{2}$ & 0.346 & 0.851 & 0.355 & 0.855 & 0.359 & 0.856 & 0.358 & 0.856 \\ 
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedastiikty-robust standard errors in parentheses are clustered by city \\
+      \\
+    \end{tablenotes}
+\end{table}
+
+\begin{equation} \label{eq:equation_3}
+ \text {Log SO2 emission }_{i k t}=\sum_{t=2002}^{2007} \alpha (Target_{i}  \times \text { Polluted sectors }_{k} \times year _{t}) +\theta {X}_{i k t}+\nu_{ik}+\lambda_{it} +\phi_{kt} +\epsilon_{ikt} 
+\end{equation}
+
+
+\begin{table}[!htbp] \centering 
+  \caption{Parallel trend} 
+\label{table_6}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{7}{c}{Dependent variable \text { SO2 emission }_{i k t}} \\ 
+\cline{2-8}
+            
+\\[-1.8ex]
+            &\multicolumn{1}{c}{}&\multicolumn{2}{c}{Output}&\multicolumn{2}{c}{Capital}&\multicolumn{2}{c}{employment}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\
+ \\[-1.8ex]& Full sample & No SOE & SOE & No SOE & SOE & No SOE & SOE\\
+ \hline \\[-1.8ex] 
+  2003 & $-$0.230 & $-$0.232 & $-$0.581 & $-$0.214 & $-$0.326 & $-$0.250 & $-$0.308 \\ 
+  & (0.222) & (0.248) & (0.838) & (0.243) & (0.833) & (0.242) & (0.846) \\ 
+  2004 & $-$0.156 & $-$0.174 & 0.148 & $-$0.197 & 0.498 & $-$0.229 & 0.498 \\ 
+  & (0.222) & (0.240) & (0.808) & (0.237) & (0.772) & (0.239) & (0.807) \\ 
+  2005 & $-$0.347 & $-$0.364 & $-$0.290 & $-$0.350 & $-$0.137 & $-$0.307 & $-$0.336 \\ 
+  & (0.258) & (0.277) & (0.886) & (0.273) & (0.884) & (0.271) & (0.905) \\ 
+  2006 & $-$0.598$^{**}$ & $-$0.645$^{**}$ & $-$0.082 & $-$0.625$^{**}$ & $-$0.019 & $-$0.630$^{**}$ & $-$0.246 \\ 
+  & (0.263) & (0.279) & (0.950) & (0.276) & (0.956) & (0.276) & (0.978) \\ 
+  2007 & $-$0.715$^{***}$ & $-$0.686$^{**}$ & $-$0.308 & $-$0.703$^{**}$ & $-$0.247 & $-$0.712$^{**}$ & $-$0.273 \\ 
+  & (0.265) & (0.280) & (0.926) & (0.276) & (0.902) & (0.282) & (0.947) \\ 
+ \hline \\[-1.8ex] 
+City-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 30,676 & 21,511 & 9,165 & 21,527 & 9,149 & 21,665 & 9,011 \\ 
+R$^{2}$ & 0.852 & 0.855 & 0.872 & 0.856 & 0.868 & 0.856 & 0.869 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+
+
+\begin{table}[!htbp] \centering 
+  \caption{\\ Effects of the policies: TCZ, Go West, and SPZ } 
+\label{table_7}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{12}{c}{Dependent variable \text { SO2 emission }_{i k t}} \\ 
+\cline{2-13}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{TCZ}&\multicolumn{2}{c}{No TCZ}&\multicolumn{2}{c}{ Coastal }&\multicolumn{2}{c}{No  Coastal}&\multicolumn{2}{c}{ SPZ }&\multicolumn{2}{c}{No  SPZ}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11) & (12)\\ 
+\hline \\[-1.8ex] 
+   target_c \times \text{Period}  & $-$0.012 &  & 0.899 &  & $-$0.202$^{*}$ &  & 0.470$^{**}$ &  & $-$0.031 &  & 0.731$^{***}$ &  \\ 
+  & (0.111) &   & (0.874) &   & (0.111) &   & (0.224) &   & (0.114) &   & (0.225) &   \\ 
+   target_c \times \text{Polluted}_i  & 0.388$^{***}$ &  & 2.570$^{**}$ &  & 0.321$^{**}$ &  & 0.661$^{***}$ &  & 0.446$^{***}$ &  & 0.688$^{**}$ &  \\ 
+  & (0.146) &   & (1.182) &   & (0.161) &   & (0.238) &   & (0.158) &   & (0.272) &   \\ 
+   target_c \times \text{Period} \times \text{Polluted}_i  & $-$0.254 & $-$0.413$^{***}$ & $-$1.335 & $-$1.415 & $-$0.241 & $-$0.356$^{**}$ & $-$0.424 & $-$0.714$^{**}$ & $-$0.317$^{*}$ & $-$0.412$^{***}$ & $-$0.695$^{**}$ & $-$0.844$^{***}$ \\ 
+  & (0.155) & (0.138) & (1.128) & (1.059) & (0.174) & (0.157) & (0.274) & (0.278) & (0.177) & (0.157) & (0.302) & (0.324) \\ 
+ \hline \\[-1.8ex] 
+City fixed effects & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+Industry fixed effects & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+Year fixed effects & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+City-year fixed effects & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+Industry-year fixed effects & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+City-industry fixed effects & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\ 
+Observations & 23,333 & 23,333 & 7,343 & 7,343 & 17,915 & 17,915 & 12,761 & 12,761 & 14,513 & 14,513 & 16,163 & 16,163 \\ 
+R$^{2}$ & 0.346 & 0.847 & 0.416 & 0.892 & 0.359 & 0.852 & 0.373 & 0.870 & 0.340 & 0.846 & 0.377 & 0.871 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+for the regressions with city,industry, year fixed effect (i.e. columns 1, 3, 5, 7, 9, 11).
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+
+
+\begin{table}[!htbp] \centering 
+  \caption{\\ Industrial concentration and environmental regulation effectiveness} 
+\label{table_8}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{Dependent variable \text { SO2 emission }_{i k t}} \\ 
+\cline{2-5}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{Concentrated}&\multicolumn{2}{c}{No Concentrated}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+   target_c \times \text{Period}  & $-$0.156 &  & 0.012 &  \\ 
+  & (0.323) &   & (0.104) &   \\ 
+   target_c \times \text{Polluted}_i  & 0.532 &  & 0.411$^{***}$ &  \\ 
+  & (0.351) &   & (0.145) &   \\ 
+   target_c \times \text{Period} \times \text{Polluted}_i  & $-$0.074 & 0.208 & $-$0.302$^{**}$ & $-$0.504$^{***}$ \\ 
+  & (0.392) & (0.396) & (0.153) & (0.143) \\ 
+ \hline \\[-1.8ex] 
+City fixed effects & Yes & No & Yes & No \\ 
+Industry fixed effects & Yes & No & Yes & No \\ 
+Year fixed effects & Yes & No & Yes & No \\ 
+City-year fixed effects & No & Yes & No & Yes \\ 
+Industry-year fixed effects & No & Yes & No & Yes \\ 
+City-industry fixed effects & No & Yes & No & Yes \\ 
+Observations & 9,181 & 9,181 & 21,495 & 21,495 \\ 
+R$^{2}$ & 0.406 & 0.888 & 0.342 & 0.846 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+for the regressions with city,industry, year fixed effect (i.e. columns 1 and 3).
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+
+\begin{equation} \label{eq:equation_4}
+ \text {Log SO2 emission }_{i k t} = \alpha \text{(ln gdp per cap)}_{ct}  + \\
+ \beta\text{(ln gdp per cap)}^2_{ct}  + \gamma \text{(ln population)}_{ct}+\nu_{c}+\lambda_{k}+\phi_{t}+\epsilon_{i k t}
+\end{equation}
+
+
+\begin{sidewaystable}%[!htb] \centering
+\begin{table}[!htbp] \centering 
+  \caption{\\ Turning points and Kuznets curves} 
+\label{table_9}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{10}{c}{Dependent variable \text { SO2 emission }_{i k t}} \\ 
+\cline{2-11}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{City}&\multicolumn{2}{c}{Concentration}&\multicolumn{2}{c}{Output}&\multicolumn{2}{c}{Capital}&\multicolumn{2}{c}{Employment}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10)\\
+ \\[-1.8ex]& TCZ & No TCZ & Concentrated & No Concentrated & SOE dominated & SOE No dominated & SOE dominated & SOE No dominated & SOE dominated & SOE No dominated\\
+ \hline \\[-1.8ex] 
+  \text{(ln gdp per cap)}_{ct}  & 2.708$^{***}$ & 0.269 & $-$0.626 & 3.391$^{***}$ & $-$0.096 & 2.611$^{***}$ & 1.437 & 2.559$^{***}$ & 0.434 & 2.984$^{***}$ \\ 
+  & (0.927) & (1.428) & (1.192) & (0.971) & (1.784) & (0.837) & (1.882) & (0.847) & (1.555) & (0.854) \\ 
+   \text{(ln gdp per cap)}^2_{ct}  & $-$0.132$^{***}$ & 0.002 & 0.039 & $-$0.158$^{***}$ & 0.017 & $-$0.127$^{***}$ & $-$0.062 & $-$0.126$^{***}$ & $-$0.015 & $-$0.143$^{***}$ \\ 
+  & (0.045) & (0.071) & (0.061) & (0.047) & (0.090) & (0.041) & (0.096) & (0.041) & (0.080) & (0.042) \\ 
+   \text{(ln population)}_{ct}  & 0.062 & 0.011 & 0.328$^{*}$ & 0.026 & 0.043 & 0.040 & $-$0.093 & 0.055 & 0.054 & 0.036 \\ 
+  & (0.103) & (0.168) & (0.191) & (0.102) & (0.211) & (0.096) & (0.221) & (0.094) & (0.218) & (0.092) \\ 
+ \hline \\[-1.8ex] 
+turning point RMB & 28795 & - & - & 45396 & - & 30264 & - & 24867 & - & 35190 \\ 
+turning point Dollar & 3568 & - & - & 5625 & - & 3750 & - & 3081 & - & 4361 \\ 
+City fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Industry fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Year fixed effects & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 22,865 & 7,330 & 9,153 & 21,042 & 9,160 & 21,035 & 9,137 & 21,058 & 8,993 & 21,202 \\ 
+R$^{2}$ & 0.344 & 0.415 & 0.405 & 0.340 & 0.376 & 0.353 & 0.375 & 0.357 & 0.372 & 0.357 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ 
+\footnotesize{
+Due to limited space, only the coefficients of interest are presented 
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+ 
+\end{tablenotes}
+\end{table}
+\end{sidewaystable}
+
+
+\begin{equation} \label{eq:equation_5}
+TFP_{fikt}=\alpha\left(\text { Target }_{i} \times \text { Polluted sectors }_{k} \times \text { Period }\right)+ \zeta_{f}+ \nu_{i k}+\lambda_{i t}+\phi_{k t}+\epsilon_{i k t}
+\end{equation}
+
+
+\begin{table}[!htbp] \centering
+  %\resizebox{1\textwidth}{!}{
+    %\begin{threeparttable}
+    \caption{Reduction mandate and TFP}
+      \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+     \label{}
+      \begin{tabular}{@{\extracolsep{5pt}}lcccc}  
+        \multicolumn{1}{l}{\textbf{Panel A: TCZ versus non-TCZ}} \\
+        \toprule
+        & \multicolumn{4}{c}{Dependent variable \text { TFP }_{fikt}} \\ 
+\cline{2-5}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{SOE}&\multicolumn{2}{c}{PRIVATE}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\
+ \\[-1.8ex]& TCZ & NO TCZ & TCZ & NO TCZ\\
+ \hline \\[-1.8ex] 
+   target_c \times \text{Period} \times \text{Polluted}_i  & 0.144$^{***}$ & $-$0.419 & $-$0.022 & $-$0.421$^{**}$ \\ 
+  & (0.050) & (0.429) & (0.021) & (0.188) \\ 
+ \hline \\[-1.8ex] 
+Firm & Yes & Yes & Yes & Yes \\ 
+City-industry &Yes & Yes & Yes & Yes \\ 
+City-time & Yes & Yes & Yes & Yes \\ 
+time-industry & Yes & Yes & Yes & Yes \\ 
+Observations & 32,078 & 9,410 & 517,652 & 89,657 \\ 
+R$^{2}$ & 0.953 & 0.961 & 0.861 & 0.869 \\
+
+        \bottomrule
+        \\ %%% Create second table
+        \multicolumn{1}{l}{\textbf{Panel B: Coastal  versus non - Coastal}} \\
+        \toprule
+        & \multicolumn{4}{c}{Dependent variable \text { TFP }_{fikt}} \\ 
+\cline{2-5}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{SOE}&\multicolumn{2}{c}{PRIVATE}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\
+ \\[-1.8ex]&  Coastal_c  & NO  Coastal_c  &  Coastal_c  & NO  Coastal_c \\
+ \hline \\[-1.8ex] 
+   target_c \times \text{Period} \times \text{Polluted}_i  & 0.158$^{**}$ & 0.119 & $-$0.012 & $-$0.087$^{**}$ \\ 
+  & (0.063) & (0.098) & (0.023) & (0.036) \\ 
+ \hline \\[-1.8ex] 
+Firm & Yes & Yes & Yes & Yes \\ 
+City-industry & Yes & Yes & Yes & Yes \\ 
+City-time & Yes & Yes & Yes & Yes \\ 
+time-industry & Yes & Yes & Yes & Yes \\ 
+Observations & 19,540 & 21,948 & 477,084 & 130,225 \\ 
+R$^{2}$ & 0.955 & 0.956 & 0.857 & 0.878 \\ 
+
+\bottomrule 
+\\ %%% Create second table
+        \multicolumn{1}{l}{\textbf{Panel C: industrial concentration}} \\
+        \toprule
+         & \multicolumn{4}{c}{Dependent variable \text { TFP }_{fikt}} \\ 
+\cline{2-5}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{SOE}&\multicolumn{2}{c}{PRIVATE}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\
+ \\[-1.8ex]& Concentrated & NO Concentrated & Concentrated & NO Concentrated\\
+ \hline \\[-1.8ex] 
+   target_c \times \text{Period} \times \text{Polluted}_i  & 0.068 & 0.159$^{**}$ & $-$0.035 & $-$0.015 \\ 
+  & (0.084) & (0.063) & (0.032) & (0.024) \\ 
+ \hline \\[-1.8ex] 
+Firm & Yes & Yes & Yes & Yes \\ 
+City-industry & Yes & Yes & Yes & Yes \\ 
+City-time & Yes & Yes & Yes & Yes \\ 
+time-industry & Yes & Yes & Yes & Yes \\ 
+Observations & 23,054 & 18,434 & 170,305 & 437,004 \\ 
+R$^{2}$ & 0.957 & 0.953 & 0.869 & 0.859 \\ 
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      Note: $^{*}$p$<$0.1 $^{**}$p$<$0.05 $^{***}$p$<$0.01 \\
+      Heteroskedasticity-robust standard errors in parentheses are clustered by city \\
+      \\
+    \end{tablenotes}
+\end{table}
+
+
+\begin{table}[!htbp] \centering 
+  \caption{TFP: below and above turning points} 
+\label{table_11}
+\begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{Dependent variable \text { TFP }_{fikt}} \\ 
+\cline{2-6}
+            
+\\[-1.8ex]
+            &\multicolumn{2}{c}{SOE}&\multicolumn{2}{c}{PRIVATE}\\
+\\[-1.8ex] & (1) & (2) & (3) & (4) \\
+ \\[-1.8ex]& Above & Below & Above & Below \\
+ \hline \\[-1.8ex] 
+target_c \times \text{Period} \times \text{Polluted}_i  &0.047 (0.102) & 0.024 (0.106) & -0.009 (0.020)& -0.008 (0.048) &  \\
+Observations  & 5,130 & 35,622 & 186,699 & 413,836&  Column (4): No Concentrated^a\\
+R$^{2}$  & 0.979&0.956&0.905&0.876&  RMB 45396\\
+\hline 
+target_c \times \text{Period} \times \text{Polluted}_i  &  0.117 (0.071) & 0.042 (0.116) & -0.018 (0.020) & -0.109 (0.069)&  \\
+Observations  & 9.397&31,355 & 284,694 & 315,841 &  Column (10): SOE No dominated^a \\ 
+R$^{2}$  &0.971&0.960&0.890&0.883&  RMB 35190\\
+\hline 
+target_c \times \text{Period} \times \text{Polluted}_i  &  0.168^{* * *}  (0.058) & 0.108 (0.126)  &-0.013 (0.020) & 0.124 (0.076)& \\
+Observations  & 12,605 & 28,147 & 350,740 & 249,795 &  Column (6): SOE No dominated^a \\ 
+R$^{2}$  & 0.965&0.963&0.882&0.892 &  RMB 30264\\
+\hline 
+target_c \times \text{Period} \times \text{Polluted}_i  & 
+0.156$^{* * *}$ (0.056)& 0.178 (0.137)& $-$0.017  (0.021)& $-$0.146$^{*}$ (0.082) & \\
+Observations  & 13,935 & 26,817 & 366,289 & 234,246 & Column (1): TCZ^a\\ 
+R$^{2}$  &0.964&0.964&0.879&0.893&  RMB  28795\\ 
+\hline 
+target_c \times \text{Period} \times \text{Polluted}_i  & 0.123^{* *} (0.051) & 0.130 (0.143) & -0.017 (0.021)&  -0.161 (0.100)& \\
+Observations  & 18,061&22,691 & 419,579 & 180,956&  Column (8): SOE No dominated^a \\ 
+R$^{2}$  & 0.958&0.966&0.869&0.894&  RMB 24867\\
+\hline \\[-1.8ex] 
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes} 
+ \small 
+ \item \\ \footnotesize{
+The columns Above (Below) refer to firms in cities whose GDP per Capita are strictly above (below) the Kuznets turning point. References are provided in the last column. \\
+$a$ refers to the number of the column from table \ref{tab:table_9}, which provides us with the estimated turning point. For instance 45 396 is estimated using the sub-sample of firms in no-concentrated cities. \\
+Due to limited space, only the coefficients of interest are presented 
+\sym{*} Significance at the 10\%, \sym{**} Significance at the 5\%, \sym{***} Significance at the 1\% \\
+heteroscedasticity-robust standard errors in parentheses are clustered by city 
+}
+\end{tablenotes}
+\end{table}
+
+
+
+
+\end{document}

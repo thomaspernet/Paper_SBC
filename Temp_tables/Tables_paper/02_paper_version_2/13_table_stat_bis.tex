@@ -1,0 +1,55 @@
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+
+\begin{document}
+
+\begin{table}[!htb] \centering
+    \caption{\\ GDP per capita, population and SO2 emissions}
+      \begin{adjustbox}{width=\textwidth, totalheight=\textheight-2\baselineskip,keepaspectratio}
+    \label{table_3}
+    \begin{tabular}{lrrrrrrrrrrrr}
+      \multicolumn{1}{l}{\textbf{\small Panel A:}} \\
+      \multicolumn{1}{l}{\textbf{\small GDP per capita and population}} \\
+      \toprule
+     & \multicolumn{3}{c}{No TCZ} & \multicolumn{3}{c}{TCZ} \\
+      & (1)  & (2) & & (3)  & (4) \\
+      & 2004-2005 &  2006-2007 & & 2004-2005 &2006-2007  \\
+      
+      \midrule
+      $\text{gdp per capita}_i$    & 16,496 & 22,665 & & 23,992 & 32,984 \\
+$\text{population}_i$ &     79 &     83 &  &  158 &    166  \\
+
+      \bottomrule
+      \\ %%% Create second table
+        \multicolumn{1}{l}{\textbf{Panel B:}} \\
+        \multicolumn{1}{l}{\textbf{SO2 emissions (millions of tonnes)}} \\
+        \toprule
+       & \multicolumn{3}{c}{No TCZ} & \multicolumn{3}{c}{TCZ} \\
+      & (1)  & (2) & (2) - (1) & (4)  & (5)  &(5) - (4) \\
+      & 2004-2005 &  2006-2007 & &  2004-2005 &2006-2007  \\
+\hline \\[-1.8ex] 
+Full sample &  2.624  & 2.833  &  0.209 &  9.736 &10.294  &  0.558  \\
+Central     &  0.991  & 1.004  &  0.013 & 2.138 & 2.154  &   0.016  \\
+Coastal     &  0.556  & 0.632  &  0.076 & 3.763 & 3.860 &   0.097  \\
+Northeast   &  0.354  & 0.389  &  0.035 & 0.537 & 0.736 &    0.199  \\
+Northwest   &  0.265  &  0.360 &  0.096 & 1.110 & 1.097 &    -0.012  \\
+Southwest   &  0.459  & 0.448  &  -0.010 & 2.189 &  2.448 &   0.259  \\
+      \bottomrule
+      \hline
+    \end{tabular}
+    \end{adjustbox}
+    \begin{tablenotes}
+      \small
+      \item 
+      \footnotesize{
+      Sources: Authors' own computation \\
+  Panel A: $\text{gdp per capita}_i$ is in RMB and $\text{population}_i$ is in million. \\ $\text{gdp per capita}_i$ and and $\text{population}_i$ are averaged over 2004-2005 and 2006-2007. They are borrowed from the China City Statistical Yearbooks 2002–2007. \\
+  Panel B: reported numbers are in millions of tonnes.  \\
+  All variables are summed over the years 2004 and 2005 and over the years 2006 and 2007. \\
+      (No) Dominated SOEs cities refer to cities where the output share of SOEs is (below) above a critical threshold, for instance the 60th decile.  \\
+      }
+    \end{tablenotes}
+\end{table}
+
+\end{document}
