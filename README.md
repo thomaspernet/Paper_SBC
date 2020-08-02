@@ -6,6 +6,11 @@ This paper analyses the efficiency of a set of environmental measures introduced
 
 The full paper in PDF format can be downloaded from here: [Link](https://github.com/thomaspernet/Paper_SBC/raw/master/SBC.pdf)
 
+- Paper published In [Public Choice](https://www.springer.com/journal/11127] journal
+  - Main page: [New evidence onthesoft budget constraint: Chinese environmental policy effectiveness inSOE‑dominated cities](https://link.springer.com/article/10.1007/s11127-020-00834-1)
+  - [Link](https://rdcu.be/b5Vka) Published version
+       
+
 Authors:
 
 - Mathilde Maurel: CNRS, France and Centre d'Economie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, France
